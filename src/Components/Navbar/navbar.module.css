@@ -1,6 +1,10 @@
 .linkDiv{
     display: flex;
     align-items: center;
+
+}
+.linkDiv div{
+    padding:0px 4px;
 }
 
 .blueBlob{
@@ -122,3 +126,29 @@ display: none;
 }
 }
 
+.comp1 img{
+    width: 380px;
+    height: 200px;
+    padding: 0;
+}
+
+.comp1link{
+    color: #008294;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.adiv{
+    margin-left: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.tealcont{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
