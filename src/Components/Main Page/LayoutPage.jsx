@@ -2,6 +2,9 @@ import React from 'react'
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
+import Component1 from './Component1'
+import TealButton from './TealButton'
+import tealButton from './TealButton'
 export default function LayoutPage() {
     return (
         <div>
@@ -23,8 +26,20 @@ export default function LayoutPage() {
                 </div>
             </section>
             
-            <Footer />
+           
           
+            <Component1 />
+            <div className={styles.tealcont}>
+               <TealButton label="Boost your career"/> 
+               <TealButton label="Find your zen"/> 
+               <TealButton label="Get moving"/> 
+               <TealButton label="Share language + culture"/> 
+               <TealButton label="Read with friends"/> 
+               <TealButton label="Write together"/> 
+               <TealButton label="Hone your craft"/> 
+            </div>
+
+            <Footer />
         </div>
     )
 }
