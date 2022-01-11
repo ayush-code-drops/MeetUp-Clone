@@ -56,9 +56,56 @@ padding:14px
     width: 72%;
 }
 
+.logincont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginimgcont{
+    /* margin-bottom: 12px; */
+    margin-top: 20px;
+}
+
+.loginimgcont img{
+width: 48px;
+height: 48px
+}
+
+.loginh1{
+    margin: 0;
+}
+
+.loginhr{
+    display: flex;
+    margin-top: 15px;
+}
+
+.loginhr hr{
+    width: 150px;
+    padding: 0px 10px;
+
+}
+
+.loginsocial{
+    display: flex;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+.inputlabel{
+    text-align: left;
+}
+
 .sec1img{
     max-width: 100%;
 }
+
+
 @media screen and (max-width:1250px) {
    .yellowBlob{
 display: none;

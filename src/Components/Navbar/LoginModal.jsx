@@ -3,17 +3,31 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import styles from './navbar.module.css';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import IconButton from '@mui/material/IconButton';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+import AppleIcon from '@mui/icons-material/Apple';
+
 
 const style = {
   position: 'absolute',
-  top: '50%',
+  top: '42%',
 
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
   
-  overflowY:'auto',
-  height:'600px',
+  overflowY:'scroll',
+  height:'570px',
   bgcolor: 'background.paper',
   border: '1px solid #000',
   borderRadius:'45px',
@@ -26,6 +40,28 @@ export default function BasicModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [values, setValues] = React.useState({
+    amount: '',
+    password: '',
+    weight: '',
+    weightRange: '',
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   return (
     <div>
       <Button sx={{color:'black'}} onClick={handleOpen}>Log in</Button>
@@ -37,13 +73,76 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
+          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+            
+          </Typography> */}
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi mollitia, ad ut, dolorum placeat incidunt eligendi repudiandae voluptates tenetur aspernatur, ullam rem! Ea nemo mollitia aspernatur non dolores, laboriosam, voluptatibus distinctio exercitationem rerum error fuga aperiam reprehenderit molestiae iste, placeat earum cumque quo possimus ducimus! Explicabo voluptas culpa sed veritatis commodi consequatur libero voluptatum fuga nisi vero, deserunt doloremque in, quam nostrum, dolores iusto temporibus. Explicabo reiciendis maxime, iure quae quisquam inventore unde blanditiis id neque aspernatur accusantium sed cupiditate corporis. Deserunt voluptate cupiditate recusandae a iste repellat expedita? Sint, corrupti placeat. Sed incidunt fugiat maiores rem mollitia dignissimos suscipit veritatis optio illum aliquam dolore aperiam, commodi distinctio hic ullam corporis voluptates officiis provident modi odit reiciendis pariatur accusantium in? Velit sequi a laudantium perferendis tempore aliquam beatae eaque architecto? Autem, laborum est vitae iste maiores beatae aut possimus doloribus pariatur. Eius dolore enim iure voluptates, laudantium exercitationem ipsam non aut numquam ad. Delectus similique deserunt recusandae ipsum consequuntur. Repudiandae, adipisci consectetur! Recusandae ut eum dolores tempore officia ullam ipsam placeat nulla repudiandae dignissimos delectus cum excepturi, totam fuga ipsum. Laudantium earum assumenda ducimus ab minus. Deserunt quam ipsam accusantium placeat iure excepturi? Eius perferendis veniam iste vel quasi maxime deserunt ad commodi vero dignissimos ullam rem recusandae molestias expedita sequi pariatur quisquam dolore debitis, atque cum mollitia quas itaque labore. Molestiae asperiores facilis beatae optio reprehenderit amet quas! Exercitationem a velit laboriosam voluptate? Natus maiores hic enim veniam eius saepe minus unde nulla nihil tenetur veritatis molestias, voluptas id, optio corporis alias minima porro ullam perferendis, possimus explicabo architecto repellat. Aspernatur, numquam expedita in nemo laborum tenetur, dolore et similique, ullam perspiciatis ex quos eaque debitis esse repellat laudantium quasi pariatur illo enim accusamus deserunt. Maiores reiciendis aperiam explicabo officia molestias laboriosam dignissimos voluptatibus temporibus minima ducimus, voluptas sint vitae dolores qui. Possimus, illo eum adipisci dolor, nobis suscipit necessitatibus ea dolore ducimus ad est, cum doloremque atque distinctio. Quae a quo culpa ratione deleniti est, dolorum repudiandae commodi quia sed illo non, similique consectetur cupiditate dicta exercitationem esse magni et. Magni repudiandae modi voluptatibus assumenda quaerat quisquam animi ea culpa eos facilis incidunt, quis impedit porro debitis eum maxime architecto inventore dolorem, facere voluptatem odit doloremque. Illo odit ab doloremque neque? Dicta consequatur nesciunt qui consequuntur optio quo possimus accusamus. Saepe eligendi ducimus voluptates quis itaque perferendis minima fugit est hic inventore molestias tempora, ipsum temporibus voluptatum eos.
+            <div className={styles.logincont}>
+              <div className={styles.loginimgcont}>
+                <img src="./login.svg" alt="img" />
+              </div>
+              <h2 className={styles.loginh1}>Log in</h2>
+              <p className="styles loginp">
+                Not a Member yet ? <a href="">Sign Up</a>
+              </p>
+              
+            </div>
+           
+            <Typography sx={{marginLeft:'40px',fontWeight:'550', fontSize:'16px'}} variant='h6'>
+              Email
+            </Typography>
+            <TextField sx={{width:'80%', m:1,marginLeft:'40px'}} id="outlined-basic" size="small"   variant="outlined" />
+            <Typography  sx={{marginLeft:'40px',fontWeight:'550', fontSize:'16px'}} variant='h6'>
+              Password
+            </Typography>
+              <FormControl sx={{ m: 1,width:'80%',marginLeft:'40px'}} variant="outlined">
+         
+              <OutlinedInput
+                size="small"
+            id="outlined-adornment-password"
+            type={values.showPassword ? 'text' : 'password'}
+            value={values.password}
+            onChange={handleChange('password')}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+            <Button sx={{ backgroundColor: '#F65858', width: '320px',padding:'10px',m:2,borderRadius:'5px',marginLeft:'40px' }} variant="contained">
+             Log in</Button>
           </Typography>
-        </Box>
+
+          <div className={styles.loginhr}>
+            <hr />
+            Or 
+            <hr />
+          </div>
+
+          <div className={styles.loginsocial}>
+            <FacebookIcon  />
+            Login With Facebook
+          </div>
+          <div className={styles.loginsocial}>
+            <GoogleIcon sx={{ marginLeft:'-10px'}}  />
+            Login With Google
+          </div>
+          <div className={styles.loginsocial}>
+            <AppleIcon sx={{ marginLeft:'-15px'}} fontSize='large' />
+            Login With Apple
+          </div>
+          </Box>
+         
+       
       </Modal>
     </div>
   );
