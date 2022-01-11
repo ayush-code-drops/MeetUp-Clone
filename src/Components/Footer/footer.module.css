@@ -1,0 +1,142 @@
+
+.container {
+    display: flex;
+    text-align: left;
+}
+
+.container1 {
+    display: flex;
+    text-align: left;
+}
+
+.items {
+    flex-grow: 1;
+}
+.items p{
+    cursor: pointer;
+}
+.items .heading{
+    cursor: default;
+}
+
+
+.footer {
+    padding: 18px 100px;
+    color: white;
+    background-color: #1f2533;
+}
+
+.heading {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+.division1 {
+    flex-grow: 1;
+}
+
+.division2 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.bottom {
+    display: flex;
+    padding-top: 30px;
+    cursor: pointer;
+}
+.bottom p {
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.appleStore {
+    height: 42px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.buttong {
+    padding: 10px;
+    margin-left: 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    background-color: #1f2533;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.head1 {
+    text-align: left;
+}
+
+.bottom p:first-child {
+    cursor: default;
+}
+
+
+@media screen and (max-width:1000px) {
+    .footer {
+        padding: 20px;
+        color: white;
+        background-color: #1f2533;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    
+.container {
+    display: block;
+    text-align: left;
+}
+
+.container1 {
+    display: block;
+    text-align: left;
+}
+
+
+
+.footer {
+    padding: 20px;
+    color: white;
+    background-color: #1f2533;
+}
+
+.heading {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.division1 {
+    flex-grow: 1;
+}
+
+.division2 {
+    flex-grow: 1;
+    display: block;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.bottom {
+    display: block;
+    padding-top: 30px;
+}
+
+.appleStore {
+    height: 42px;
+    padding-left: 20px;
+}
+
+.bottom p {
+    text-align: left;
+    padding-right: 0px;
+}
+}

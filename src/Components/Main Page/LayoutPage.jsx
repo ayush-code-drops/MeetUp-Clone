@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 export default function LayoutPage() {
@@ -19,8 +20,10 @@ export default function LayoutPage() {
                     <div className={styles.sec1img}>
                         <img className={styles.sec1img} width="427px" height="290px" src="https://secure.meetupstatic.com/next/images/shared/online_events.svg?w=1080" alt="img" />
                     </div>
-</div>
+                </div>
             </section>
+            
+            <Footer />
           
         </div>
     )
