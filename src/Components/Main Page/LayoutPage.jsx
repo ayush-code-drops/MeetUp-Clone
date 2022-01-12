@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
@@ -21,8 +22,11 @@ export default function LayoutPage() {
                     <div className={styles.sec1img}>
                         <img className={styles.sec1img} width="427px" height="290px" src="https://secure.meetupstatic.com/next/images/shared/online_events.svg?w=1080" alt="img" />
                     </div>
-</div>
+                </div>
             </section>
+            
+           
+          
             <Component1 />
             <div className={styles.tealcont}>
                <TealButton label="Boost your career"/> 
@@ -33,6 +37,8 @@ export default function LayoutPage() {
                <TealButton label="Write together"/> 
                <TealButton label="Hone your craft"/> 
             </div>
+
+            <Footer />
         </div>
     )
 }
