@@ -4,8 +4,17 @@ import styles from "./homePage.module.css"
 import Button from '@mui/material/Button';
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const handleclick2 = () => {
+        console.log(2);
+        <Link to="/findgroup"></Link>
+    }
+    const handleclick1 = () => {
+        console.log(1);
+        <Link to="/findevent"></Link>
+    }
     return(
         <div>
             <Navbar style={{color:"white"}}>
@@ -26,7 +35,7 @@ const Home = () => {
                     <div style={{textAlign:"left"}}>
                         <h3>Find your first event</h3>
                         <p>Events are happening 24/7. What do you want to do?</p>
-                        <Button variant="outlined">Discover Events</Button>
+                        <Button variant="outlined" onClick={handleclick2}>Discover Events</Button>
    
                     </div>
                
@@ -38,7 +47,7 @@ const Home = () => {
                     <div style={{textAlign:"left"}}>
                         <h3>Join your first group</h3>
                         <p>As a member, you’ll receive updates each time your group schedules new events.</p>
-                        <Button variant="outlined">Join Groups</Button>
+                        <Button variant="outlined" onClick={handleclick1}>Join Groups</Button>
    
                     </div>
                     </div>
