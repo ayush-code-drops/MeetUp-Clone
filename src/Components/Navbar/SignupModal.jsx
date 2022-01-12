@@ -8,6 +8,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import EmailIcon from '@mui/icons-material/Email';
+import LoginModal from './LoginModal'
+import SignupEmail from './SignupEmailModal';
 const style = {
   position: 'absolute',
   
@@ -70,9 +72,11 @@ export default function SignupModal() {
             Continue With Apple
           </div>
           <div className={styles.loginsocial}>
-            <EmailIcon sx={{ marginLeft:'-19px'}}  />
-            Sign Up With Email
+            {/* <EmailIcon sx={{ marginLeft:'-19px'}}  />
+            Sign Up With Email */}
+            <SignupEmail/>
           </div>
+        
         </Box>
       </Modal>
     </div>

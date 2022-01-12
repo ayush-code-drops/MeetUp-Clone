@@ -3,7 +3,6 @@ import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
-import tealButton from './TealButton'
 export default function LayoutPage() {
     return (
         <div>

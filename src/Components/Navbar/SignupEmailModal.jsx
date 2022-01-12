@@ -16,11 +16,8 @@ import IconButton from '@mui/material/IconButton';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
-import { fetchUserData } from './fetchUserData';
-import {ClipLoader,BeatLoader} from "react-spinners"
-import { useDispatch, useSelector } from 'react-redux';
-import { css } from "@emotion/react";
-import { loginFailure, loginRequest, loginSuccess, wrongCredentials } from '../../redux/auth/action';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 const style = {
   position: 'absolute',
@@ -39,52 +36,21 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+export default function SignupEmail() {
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-const[state,handleState]=React.useState(false)
-  const [email,setEmail]=React.useState("")
+    const handleClose = () => setOpen(false);
+    const [email,setEmail]=React.useState("")
+    const [name,setName]=React.useState("")
 
   const [values, setValues] = React.useState({
     password: '',
-   
+    name: name,
     email: email,
     showPassword: false,
   });
 
-  const {isAuth,isLoading,isError}=useSelector((state)=>state.auth)
-  console.log('auth', isAuth, isLoading, isError)
-  const dispatch=useDispatch()
-  const handleLogin = () => {
-dispatch(loginRequest())
-    fetchUserData().then(
-
-      (res) => {
-        console.log(res.data)
-        const userExist = res.data.filter((item) => {
-          if (item.email === email && item.password === values.password) {
-            return item
-          }
-        })
-        
-        if (userExist.length === 0) {
-          dispatch(wrongCredentials())
-          alert("Wrong Credentials")
-        }
-
-        else {
-          dispatch(loginSuccess())
-          alert('Login Successful')
-        }
-      }
-        )
-      .catch((err) => {
-      dispatch(loginFailure())
-    })
-  }
-
- 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -98,20 +64,31 @@ dispatch(loginRequest())
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
-  };
+    };
 
-  const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
- 
-`;
-
-  
+    const handleSignup=()=>{
+        const payload = {
+            name: name,
+            email: email,
+            password:values.password
+        }
+   
+    }
+    
+    React.useEffect(() => {
+       
+            const script = document.createElement("script");
+        
+            script.src = 'https://www.google.com/recaptcha/api.js';
+            script.async = true;
+        
+            document.body.appendChild(script);
+      
+   },[])
   return (
     <div>
-      
-      <Button sx={{color:'black'}} onClick={handleOpen}>Log in</Button>
+      <Button sx={{color:'black',textTransform:'capitalize'}} onClick={handleOpen}> <EmailIcon sx={{ marginLeft:'-27px'}}  />
+       &emsp; &emsp; &emsp; &emsp;  Sign Up With Email</Button>
       <Modal
       sx={{marginTop:'100px'}}
         open={open}
@@ -124,21 +101,15 @@ dispatch(loginRequest())
             
           </Typography> */}
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <div className={styles.logincont}>
-              <div className={styles.loginimgcont}>
-                <img src="./login.svg" alt="img" />
-              </div>
-              <h2 className={styles.loginh1}>Log in</h2>
-              <p className="styles loginp">
-                Not a Member yet ? <a href="">Sign Up</a>
-              </p>
-              
-            </div>
-            <ClipLoader css={override} color='red' loading={isLoading} size={50} />
+           <h2 classname={styles.emailh2}>Finish signing up</h2>
+           <Typography sx={{marginLeft:'40px',fontWeight:'550', fontSize:'16px'}} variant='h6'>
+              Your Name
+            </Typography>
+            <TextField onChange={(e)=>setName(e.target.value)}  sx={{width:'80%', m:1,marginLeft:'40px'}} id="outlined-basic" size="small"   variant="outlined" />
             <Typography sx={{marginLeft:'40px',fontWeight:'550', fontSize:'16px'}} variant='h6'>
               Email
             </Typography>
-            <TextField onChange={(e)=>setEmail(e.target.value)} sx={{width:'80%', m:1,marginLeft:'40px'}} id="outlined-basic" size="small"   variant="outlined" />
+            <TextField onChange={(e)=>setEmail(e.target.value)}  placeholder='example@email.com' type="email" sx={{width:'80%', m:1,marginLeft:'40px'}} id="outlined-basic" size="small"   variant="outlined" required/>
             <Typography  sx={{marginLeft:'40px',fontWeight:'550', fontSize:'16px'}} variant='h6'>
               Password
             </Typography>
@@ -164,29 +135,16 @@ dispatch(loginRequest())
             }
             label="Password"
           />
-        </FormControl>
-            <Button sx={{ backgroundColor: '#F65858', width: '320px',padding:'10px',m:2,borderRadius:'5px',marginLeft:'40px' }} variant="contained" onClick={handleLogin}>
-             Log in</Button>
+                      </FormControl>
+                      
+                      <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>
+            <Button sx={{ backgroundColor: '#F65858', width: '320px',padding:'10px',m:2,borderRadius:'9px',marginLeft:'40px',textTransform:'capitalize',fontWeight:'bold',fontSize:'20px' }} variant="contained" onClick={handleSignup}>
+                          Sign Up</Button>
+                      <p className={styles.signp}>By signing up, you agree to <a href="">Terms of Service</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.</p>
+                      <p className={styles.signp}>Already a Member <a href="">Login</a></p>
           </Typography>
 
-          <div className={styles.loginhr}>
-            <hr />
-            Or 
-            <hr />
-          </div>
-
-          <div className={styles.loginsocial}>
-            <FacebookIcon  />
-            Login With Facebook
-          </div>
-          <div className={styles.loginsocial}>
-            <GoogleIcon sx={{ marginLeft:'-10px'}}  />
-            Login With Google
-          </div>
-          <div className={styles.loginsocial}>
-            <AppleIcon sx={{ marginLeft:'-15px'}} fontSize='large' />
-            Login With Apple
-          </div>
+          
           </Box>
          
        
