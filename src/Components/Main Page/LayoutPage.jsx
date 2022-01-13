@@ -4,10 +4,13 @@ import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
-import tealButton from './TealButton'
+import AllRoutes from '../../Routes/AllRoutes'
+
 export default function LayoutPage() {
     return (
         <div>
+
+            <AllRoutes />
             <Navbar />
 
              <img className={styles.blueBlob} src="https://secure.meetupstatic.com/next/images/blobs/green-blob.svg" alt="img"/>
@@ -40,6 +43,7 @@ export default function LayoutPage() {
             </div>
 
             <Footer />
+            
         </div>
     )
 }

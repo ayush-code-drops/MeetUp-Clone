@@ -1,5 +1,6 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
+import Event from '../Components/Event/Event';
 
 export default function AllRoutes() {
     return (
@@ -8,6 +9,7 @@ export default function AllRoutes() {
                 <Route exact path='/home'> 
             <div>home</div>        
         </Route>    
+        <Route exact path="/EVENTS"><Event /> </Route>
              
             </Switch>
             
