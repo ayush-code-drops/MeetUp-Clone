@@ -9,7 +9,6 @@ export default function AllRoutes() {
                 <Route exact path='/home'> 
             <div>home</div>        
         </Route>    
-        <Route exact path="/EVENTS"><Event /> </Route>
              
             </Switch>
             

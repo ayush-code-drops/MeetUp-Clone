@@ -3,6 +3,8 @@ import axios from 'axios';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import EventComponent from './EventComponent';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 const styleContainer = {
     width: "640px",
@@ -144,12 +146,26 @@ function Event() {
                 </Select>
             </div>
 
+            {
+                data.length !== 0 ? 
+            
             <div>
                 {
                     type === "" ?
                         data.map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : type === "Online" ? data.filter(({ event_mode }) => (event_mode === "online")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : data.filter(({ event_mode }) => (event_mode === "In-person")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />)
                 }
             </div>
+            :
+            <Stack spacing={1}>
+                <hr />
+                <Skeleton variant="rectangular" width={640} height={128} />
+                <Skeleton variant="rectangular" width={640} height={128} />
+                <Skeleton variant="rectangular" width={640} height={128} />
+                <Skeleton variant="rectangular" width={640} height={128} />
+                <Skeleton variant="rectangular" width={640} height={128} />
+                <Skeleton variant="rectangular" width={640} height={128} />
+            </Stack>
+            }
         </div>
     )
 }
