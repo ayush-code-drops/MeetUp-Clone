@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { makeStyles } from "@material-ui/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -7,13 +7,15 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContextProvider";
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 14px;
 `;
-const logoCont = styled.div``;
+const LogoCont = styled.div``;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,74 +38,100 @@ function getSteps() {
   ];
 }
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return (
-        <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
-          <h1>First, set your group’s location.</h1>
-          <p>
-            Meetup groups meet locally, in person and online. We'll connect you
-            with people in your area, and more can join you online.
-          </p>
-          <TextField
-            id="outlined-basic"
-            label="Choose Group location"
-            variant="outlined"
-          />
-        </div>
-      );
-    case 1:
-      return (
-        <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
-          <h1>What will your group’s name be?</h1>
-          <p>
-            Choose a name that will give people a clear idea of what the group
-            is about. Feel free to get creative! You can edit this later if you
-            change your mind.
-          </p>
-          <TextField
-            id="outlined-basic"
-            label="Your Group name?"
-            variant="outlined"
-          />
-        </div>
-      );
-    case 2:
-      return (
-        <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
-          <h1>Almost done! Just take a minute to review our guidelines</h1>
-          <p>
-            Meetup is all about helping people live fuller, happier lives—with
-            the help of strong communities. This means that all groups should:
-          </p>
-          <ul>
-            <li>Provide growth opportunities for members</li>
-            <li>Encourage real human interactions in person or online</li>
-            <li>Have a host present at all events</li>
-            <li>Be transparent about the group’s intentions</li>
-          </ul>
-          <p>
-            You can read more about all of this in our{" "}
-            <strong>community guidelines.</strong>
-          </p>
-          <p>
-            Once you submit your group, a human at Meetup will review it based
-            on these guidelines and make sure it gets promoted to the right
-            people.
-          </p>
-        </div>
-      );
-    default:
-      return "Unknown step";
-  }
-}
+
 
 export default function HorizontalLinearStepper() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const steps = getSteps();
+  const {location,setLocation} = useContext(AppContext);
+  const {name, setName} = useContext(AppContext);
+  // const [name2,setName2] = useState("");
+  console.log("hi",name,location)
+     
+
+  
+const handleChange = (e) => {
+  setLocation(e.target.value);
+}
+
+
+const handleChange1 = (e) => {
+  setName(e.target.value);
+}
+
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return (
+          <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
+            <h1>First, set your group’s location.</h1>
+            <p>
+              Meetup groups meet locally, in person and online. We'll connect you
+              with people in your area, and more can join you online.
+            </p>
+            <TextField
+              id="outlined-basic"
+              label="Choose Group location"
+              variant="outlined"
+              onChange={handleChange}
+            />
+          </div>
+        );
+      case 1:
+         return (
+          <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
+            <h1>What will your group’s name be?</h1>
+            <p>
+              Choose a name that will give people a clear idea of what the group
+              is about. Feel free to get creative! You can edit this later if you
+              change your mind.
+            </p>
+            <TextField
+              id="outlined-basic"
+              label="Your Group name?"
+              variant="outlined"
+              onChange={handleChange1}
+            />
+          </div>
+        );
+      case 2:
+        return (
+          <div style={{ width: "70%", margin: "auto",textAlign:"left" }}>
+            <h1>Almost done! Just take a minute to review our guidelines</h1>
+            <p>
+              Meetup is all about helping people live fuller, happier lives—with
+              the help of strong communities. This means that all groups should:
+            </p>
+            <ul>
+              <li>Provide growth opportunities for members</li>
+              <li>Encourage real human interactions in person or online</li>
+              <li>Have a host present at all events</li>
+              <li>Be transparent about the group’s intentions</li>
+            </ul>
+            <p>
+              You can read more about all of this in our{" "}
+              <strong>community guidelines.</strong>
+            </p>
+            <p>
+              Once you submit your group, a human at Meetup will review it based
+              on these guidelines and make sure it gets promoted to the right
+              people.
+            </p>
+          </div>
+        );
+      default:
+        return "Unknown step";
+    }
+  }
+
+
+
+
+
+
+
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -150,9 +178,9 @@ export default function HorizontalLinearStepper() {
   return (
     <div className={classes.root}>
       <Nav>
-        <logoCont>
+        <LogoCont>
           <img src="./logo.svg" alt="logo-img" />
-        </logoCont>
+        </LogoCont>
       </Nav>
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
