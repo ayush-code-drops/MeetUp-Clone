@@ -7,6 +7,8 @@ import TealButton from './TealButton'
 export default function LayoutPage() {
     return (
         <div>
+
+            <AllRoutes />
             <Navbar />
 
              <img className={styles.blueBlob} src="https://secure.meetupstatic.com/next/images/blobs/green-blob.svg" alt="img"/>
@@ -39,6 +41,7 @@ export default function LayoutPage() {
             </div>
 
             <Footer />
+            
         </div>
     )
 }
