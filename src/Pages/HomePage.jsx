@@ -23,6 +23,8 @@ const Home = () => {
            </Navbar>
             {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
              {/* </div> */}
+
+             
             <div>
                 <img src="/photoImg1.svg" alt="img"/>
                 <h1 style={{fontWeight:"bold",fontSize:"35px"}}>Welcome to Meetup!!!</h1>
