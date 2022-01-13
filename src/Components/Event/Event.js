@@ -1,8 +1,13 @@
 import * as React from 'react';
-import { Link } from "react-router-dom";
+import axios from 'axios';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import EventComponent from './EventComponent';
+
+const styleContainer = {
+    width: "640px",
+    marginLeft: "12vw"
+}
 
 function Event() {
 
@@ -62,13 +67,22 @@ function Event() {
         setCate(event.target.value);
     };
 
-    console.log(dayType, type, dist, cate );
+    const [data, setData] = React.useState([]);
+
+    const getEvents = async () => {
+        let eventData = await axios.get("https://meetupserverjsonserver.herokuapp.com/posts");
+        eventData = eventData.data;
+        setData(eventData);
+        console.log(eventData);
+    }
+
+    React.useEffect(() => {
+        getEvents();
+    }, [])
 
     return (
 
-        <div >
-            <Link to="EVENTS">EVENTS</Link>
-            <Link to="GROUPS">GROUPS</Link>
+        <div style={styleContainer}>
             <br />
             <div>
                 <Select
@@ -96,7 +110,7 @@ function Event() {
                         <em>Any Type</em>
                     </MenuItem>
                     <MenuItem value="Online">Online</MenuItem>)
-                    <MenuItem value="In Person">In Person</MenuItem>)
+                    <MenuItem value="InPerson">In Person</MenuItem>)
                 </Select>
 
                 <Select
@@ -128,11 +142,13 @@ function Event() {
                         category.map((d) => <MenuItem value={d}>{d}</MenuItem>)
                     }
                 </Select>
-                <hr />
             </div>
 
             <div>
-                <EventComponent />
+                {
+                    type === "" ?
+                        data.map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : type === "Online" ? data.filter(({ event_mode }) => (event_mode === "online")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : data.filter(({ event_mode }) => (event_mode === "In-person")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />)
+                }
             </div>
         </div>
     )

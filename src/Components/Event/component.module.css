@@ -1,10 +1,15 @@
 .container {
     display: flex;
+    width: 640px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    margin-top: 10px;
 }
 
 .text {
     text-align: left;
     padding: 0px 20px;
+    flex-grow: 1;
 }
 
 .image {

@@ -35,7 +35,7 @@ export default function KeepMountedModal() {
 
   return (
     <div>
-    <IosShareIcon onClick={handleOpen} sx={{ color:"#979595" }} />
+    <IosShareIcon onClick={handleOpen} sx={{ color:"#979595", cursor: 'pointer' }} />
       <Modal
         keepMounted
         open={open}
