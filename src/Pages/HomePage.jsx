@@ -6,15 +6,27 @@ import Footer from '../Components/Footer/Footer';
 import Navbar2 from '../Components/Navbar/Navbar2';
 import { Link } from 'react-router-dom';
 import TealButton from '../Components/Main Page/TealButton'
+import { useContext } from "react";
+import { AppContext } from "../context/AppContextProvider";
+
+
 const Home = () => {
+    const {location,setLocation} = useContext(AppContext);
+    const {name, setName} = useContext(AppContext);
+    // const [name2,setName2] = useState("");
+     console.log("hi",name,location)
+   
     const handleclick2 = () => {
         console.log(2);
-        <Link to="/findgroup"></Link>
+        // <Link to="/findgroup"></Link>
     }
     const handleclick1 = () => {
         console.log(1);
-        <Link to="/findevent"></Link>
+        // <Link to="/findevent"></Link>
     }
+
+
+
     return(
         <div>
             <Navbar2 style={{color:"white"}}/>
@@ -22,6 +34,7 @@ const Home = () => {
              {/* </div> */}
 
              
+             <div>{name}{location}</div>
             <div>
                 <img src="/photoImg1.svg" alt="img"/>
                 <h1 style={{fontWeight:"bold",fontSize:"35px"}}>Welcome to Meetup!!!</h1>

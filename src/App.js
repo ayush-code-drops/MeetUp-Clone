@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
     {/* <LayoutPage/> */}
-    {/* <Home/> */}
+    <Home/>
     <HorizontalLinearStepper/>
     </div>
   );
