@@ -3,9 +3,9 @@ import TextField from '@mui/material/TextField';
 import styles from "./homePage.module.css"
 import Button from '@mui/material/Button';
 import Footer from '../Components/Footer/Footer';
-import Navbar from '../Components/Navbar/Navbar';
+import Navbar2 from '../Components/Navbar/Navbar2';
 import { Link } from 'react-router-dom';
-
+import TealButton from '../Components/Main Page/TealButton'
 const Home = () => {
     const handleclick2 = () => {
         console.log(2);
@@ -17,10 +17,7 @@ const Home = () => {
     }
     return(
         <div>
-            <Navbar style={{color:"white"}}>
-            <TextField id="outlined-basic" label="Search for keywords" variant="outlined" />
-            <TextField id="outlined-basic" label="City or zip code" variant="outlined" />
-           </Navbar>
+            <Navbar2 style={{color:"white"}}/>
             {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
              {/* </div> */}
 
@@ -55,6 +52,7 @@ const Home = () => {
                     </div>
                
             </div>
+            <TealButton/>
             <Footer/>
         </div>
 
