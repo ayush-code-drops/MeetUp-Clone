@@ -18,7 +18,12 @@ export default function AllRoutes() {
         
                 <Route exact path='/creategroup'> 
         <HorizontalLinearStepper/>   
-        </Route>    
+            </Route>   
+        
+                <Route exact path='/events'> 
+          
+            </Route>   
+            
                 
            
             
