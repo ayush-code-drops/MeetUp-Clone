@@ -3,6 +3,7 @@ import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import KeepMountedModal from "./KeepMountedModal";
 import StarIcon from "@mui/icons-material/Star";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function EventComponent({
   id,
@@ -19,12 +20,14 @@ function EventComponent({
   return (
     <div className={styles.container}>
       <div>
-        <img
-          className={styles.image}
-          src={img_url}
-          alt="event"
-          onClick={() => handelClick(id)}
-        />
+        <Link to={`/event/${id}`}>
+          <img
+            className={styles.image}
+            src={img_url}
+            alt="event"
+            onClick={() => handelClick(id)}
+          />
+        </Link>
       </div>
       <div className={styles.text}>
         <p className={styles.p1}>{date}</p>

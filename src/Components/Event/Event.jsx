@@ -87,7 +87,7 @@ function Event() {
   console.log("Bookmarks", bookmarks);
   const handelClick = (item) => {
     for (let i = 0; i < bookmarks.length; i++) {
-      if (item.id == bookmarks[i].id) {
+      if (item.id === bookmarks[i].id) {
         dispatch(removeFromBookmark(item.id));
         return;
       }
@@ -206,6 +206,7 @@ function Event() {
                       event_name={event_name}
                       event_place={event_place}
                       attendees={attendees}
+                      handelClick={handelClick}
                     />
                   )
                 )
@@ -230,6 +231,7 @@ function Event() {
                       event_name={event_name}
                       event_place={event_place}
                       attendees={attendees}
+                      handelClick={handelClick}
                     />
                   )
                 )}
