@@ -1,14 +1,22 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
+
 export default function LayoutPage() {
+    const isAuth = useSelector(state => state.auth.isAuth)
+    
+    if (isAuth) {
+return <Redirect to="/home"/>
+    }
     return (
         <div>
 
-            <AllRoutes />
+            
             <Navbar />
 
              <img className={styles.blueBlob} src="https://secure.meetupstatic.com/next/images/blobs/green-blob.svg" alt="img"/>
