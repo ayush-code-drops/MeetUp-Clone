@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import { Link } from 'react-router-dom';
 
 
 const Nav = styled.nav`
@@ -42,7 +43,9 @@ export default function Navbar2() {
           ByteLengthQueuingStrategy
         /></button>
             </logoCont>
-           
+            <div className="startGroup">
+                <Link className={styles.grouplink} to="/createGroup">Start a new group - 30% off!</Link>
+           </div>
             <div className={styles.linkDiv}>
                 <div style={{marginleft: 10,fontSize:"20px"}}>
                     <MessageIcon/>

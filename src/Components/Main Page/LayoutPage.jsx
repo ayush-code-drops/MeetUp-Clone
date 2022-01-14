@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar'
 import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
-
+import NextEvent from '../../Pages/HomePageComps/NextEvent'
 // import tealButton from './TealButton'
 export default function LayoutPage() {
     const isAuth = useSelector(state => state.auth.isAuth)
@@ -48,7 +48,35 @@ return <Redirect to="/home"/>
                <TealButton label="Write together"/> 
                <TealButton label="Hone your craft"/> 
             </div>
+            <div className={styles.nextSec}>
 
+<NextEvent/>
+
+<div className={styles.next2}>
+
+<h1>Check out what’s happening:</h1>
+
+<div className={styles.tealcont}>
+
+<TealButton label="Starting Soon"/>
+
+<TealButton label="Today"/>
+
+<TealButton label="Tommorow"/>
+
+<TealButton label="This Week"/>
+
+<TealButton label="Online"/>
+
+<TealButton label="In Person"/>
+
+<TealButton label="Trending Near you"/>
+
+</div>
+
+</div>
+
+</div>
             <Footer />
             
         </div>

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import TealButton from '../Components/Main Page/TealButton'
 import { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
+import NextEvent from './HomePageComps/NextEvent';
 
 
 const Home = () => {
@@ -100,6 +101,35 @@ const Home = () => {
            
             
             {/* <TealButton/> */}
+            <div className={styles.nextSec}>
+
+<NextEvent/>
+
+<div className={styles.next2}>
+
+<h1>Check out what’s happening:</h1>
+
+<div className={styles.tealcont}>
+
+<TealButton label="Starting Soon"/>
+
+<TealButton label="Today"/>
+
+<TealButton label="Tommorow"/>
+
+<TealButton label="This Week"/>
+
+<TealButton label="Online"/>
+
+<TealButton label="In Person"/>
+
+<TealButton label="Trending Near you"/>
+
+</div>
+
+</div>
+
+</div>
             <Footer/>
         </div>
 

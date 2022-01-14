@@ -1,22 +1,26 @@
+import { HorizontalRule } from '@mui/icons-material';
 import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 import Event from '../Components/Event/Event';
 import LayoutPage from '../Components/Main Page/LayoutPage';
-
+import Home from '../Pages/HomePage';
+import HorizontalLinearStepper from '../CreateYourGroup/HorizontalLinearStepper';
 export default function AllRoutes() {
     return (
         <div>
-            <Switch>
+            
                 <Route exact path='/home'> 
-                <div>Home</div>  
+               <Home/>  
         </Route>    
                 <Route exact path='/'> 
            <LayoutPage/>     
         </Route>    
-                <Route>
-                    <div>404 Page Not Found</div>
-                 </Route>
-            </Switch>
+        
+                <Route exact path='/creategroup'> 
+        <HorizontalLinearStepper/>   
+        </Route>    
+                
+           
             
         </div>
     )

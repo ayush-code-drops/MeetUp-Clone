@@ -162,3 +162,19 @@ display: none;
 .signp{
     text-align: center;
 }
+
+.grouplink{
+    color: #008294;
+    text-decoration: none;
+    font-weight: 600;
+display: flex;
+align-self: center;
+margin-top: 15px;
+}
+.nextSec{
+    display: grid;
+    grid-template-columns:50% 46% ;
+    gap: 5px;
+    margin: 100px 10px;
+    
+    }
