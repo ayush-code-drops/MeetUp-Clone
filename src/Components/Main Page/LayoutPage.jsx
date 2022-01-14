@@ -7,6 +7,7 @@ import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
 
+// import tealButton from './TealButton'
 export default function LayoutPage() {
     const isAuth = useSelector(state => state.auth.isAuth)
     
@@ -27,7 +28,7 @@ return <Redirect to="/home"/>
                 <div className={styles.sec1Grid}>
                     <div className={styles.sec1sec1}>
                         <h1 className={styles.sec1h1}>Celebrating 20 years of real connections on Meetup</h1>
-                        <p className={styles.sec1p}>Whatever you’re looking to do this year, Meetup can help. For 20 years, people have turned to Meetup to meet people, make friends, find support, grow a business, and explore their interests. Thousands of events are happening every day—join the fun.</p>
+                        <p className={styles.sec1p}>Whatever you are looking to do this year, Meetup can help. For 20 years, people have turned to Meetup to meet people, make friends, find support, grow a business, and explore their interests. Thousands of events are happening every day—join the fun.</p>
                     </div>   
                     <div className={styles.sec1img}>
                         <img className={styles.sec1img} width="427px" height="290px" src="https://secure.meetupstatic.com/next/images/shared/online_events.svg?w=1080" alt="img" />
