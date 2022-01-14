@@ -1,8 +1,8 @@
-import styles from "./component.module.css";
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-import KeepMountedModal from "./KeepMountedModal";
+import KeepMountedModal from "../Event/KeepMountedModal";
+import styles from "./bookmark.module.css";
+import StarIcon from "@mui/icons-material/Star";
 
-function EventComponent({
+function BookmarkCard({
   id,
   img_url,
   event_mode,
@@ -26,8 +26,12 @@ function EventComponent({
         <p className={styles.p4}>
           <div>{attendees} attendees</div>
           <KeepMountedModal />
-          <StarBorderOutlinedIcon
-            sx={{ marginLeft: "10px", color: "#979595", cursor: "pointer" }}
+          <StarIcon
+            sx={{
+              marginLeft: "10px",
+              color: "rgb(246,88,88)",
+              cursor: "pointer"
+            }}
             onClick={() =>
               handelClick({
                 id,
@@ -46,4 +50,4 @@ function EventComponent({
   );
 }
 
-export default EventComponent;
+export default BookmarkCard;
