@@ -8,6 +8,7 @@ import Event from "../Event/Event";
 import { useSelector, useDispatch } from "react-redux";
 import BookmarkCard from "../BookmarkCard/BookmarkCard";
 import { removeFromBookmark } from "../../redux/bookmark/action";
+import Description from "../Description/Description";
 
 export default function LayoutPage() {
   const bookmarks = useSelector((state) => state.bookmarks);
@@ -20,6 +21,7 @@ export default function LayoutPage() {
   console.log("Heloow, ", bookmarks);
   return (
     <div>
+      <Description />
       <Event />
       <Navbar />
 

@@ -15,7 +15,12 @@ function EventComponent({
   return (
     <div className={styles.container}>
       <div>
-        <img className={styles.image} src={img_url} alt="event" />
+        <img
+          className={styles.image}
+          src={img_url}
+          alt="event"
+          onClick={() => handelClick(id)}
+        />
       </div>
       <div className={styles.text}>
         <p className={styles.p1}>{date}</p>
