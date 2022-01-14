@@ -13,6 +13,12 @@ import { AppContext } from "../context/AppContextProvider";
 const Home = () => {
     const {location,setLocation} = useContext(AppContext);
     const {name, setName} = useContext(AppContext);
+
+
+
+    localStorage.setItem("arr",[location,name]);
+
+
     // const [name2,setName2] = useState("");
      console.log("hi",name,location)
    
@@ -34,7 +40,7 @@ const Home = () => {
              {/* </div> */}
 
              
-             <div>{name}{location}</div>
+             {/* <div>{name}{location}</div> */}
             <div>
                 <img src="/photoImg1.svg" alt="img"/>
                 <h1 style={{fontWeight:"bold",fontSize:"35px"}}>Welcome to Meetup!!!</h1>
@@ -65,7 +71,23 @@ const Home = () => {
                     </div>
                
             </div>
-            <TealButton/>
+
+            <div>
+                <h3>Your Created Groups will show here.</h3>
+
+                <div style={{backgroundColor:"white",display:"flex",padding:"3rem",margin:"20px",width:"50%"}}>
+                    <div>
+                        <img src="https://secure-content.meetupstatic.com/images/classic-events/500613123/333x188.webp" alt="img" style={{height:"150px",width:"150px",borderRadius:"10px",marginRight:"10px"}}/>
+                    </div>
+                    <div style={{textAlign:"left"}}>
+                        <h3>Event Name : {name}</h3>
+                        <p>Event Location : {location}</p>
+   
+                    </div>
+               
+                </div>
+            </div>
+            {/* <TealButton/> */}
             <Footer/>
         </div>
 
