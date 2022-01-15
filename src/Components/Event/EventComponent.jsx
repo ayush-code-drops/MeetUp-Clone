@@ -20,7 +20,7 @@ function EventComponent({
   return (
     <div className={styles.container}>
       <div>
-        <Link to={`/event/${id}`}>
+        <Link to={`/events/${id}`}>
           <img
             className={styles.image}
             src={img_url}
