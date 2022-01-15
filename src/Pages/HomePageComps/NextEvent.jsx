@@ -28,6 +28,9 @@ import DateTimePicker from '@mui/lab/DateTimePicker';
 
 import { Button } from '@mui/material';
 
+import{ AppContext} from "../../context/AppContextProvider"
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+
 const currencies = [
 
 {
@@ -58,10 +61,16 @@ label: 'In Person + Online',
 
 export default function NextEvent() {
 
+    const { data, setData } = React.useContext(AppContext)
+    
+   // console.log("nwxtdata",data)
+
 const [currency, setCurrency] = React.useState('In Person');
 
-const [value, setValue] = React.useState(new Date('2022-01-15T21:11:54'));
-
+    const [value, setValue] = React.useState(new Date('2022-01-15'));
+    const [location,setLocation]=React.useState("")
+  const[keyword,setKeyword]=React.useState("")
+const history=useHistory()
 const handleChange2 = (newValue) => {
 
 setValue(newValue);
@@ -72,7 +81,18 @@ const handleChange = (event) => {
 
 setCurrency(event.target.value);
 
-};
+    };
+    
+    const handleEventSearch = () => {
+
+        const eveList = data.filter((item) => item.event_place == location).filter(
+            (item)=> item.workshop_details.includes(keyword))
+        
+
+        setData(eveList)
+        history.push('./events')
+
+    }
 
 return (
 
@@ -80,8 +100,11 @@ return (
 
 <h1>Find Your Next Event:</h1>
 
-<TextField sx={{m:1}}
-
+        <TextField sx={{ m: 1 }}
+            value={keyword}
+            onChange={(e)=>setKeyword(e.target.value)}
+            
+       
 id="input-with-icon-textfield"
 
 placeholder='Find your next event'
@@ -107,7 +130,8 @@ variant="outlined"
 <TextField sx={{m:1}}
 
 id="input-with-icon-textfield"
-
+            value={location}
+            onChange={(e)=>setLocation(e.target.value)}
 placeholder='Location'
 
 InputProps={{
@@ -166,7 +190,7 @@ renderInput={(params) => <TextField {...params} />}
 
 />
 
-<Button sx={{ backgroundColor: '#F65858',width:'79%',padding:'10px',m:2,borderRadius:'12px',fontSize:'18px' }} variant="contained" >
+<Button sx={{ backgroundColor: '#F65858',width:'79%',padding:'10px',m:2,borderRadius:'12px',fontSize:'18px' }} variant="contained" onClick={handleEventSearch}>
 
 Search</Button>
 

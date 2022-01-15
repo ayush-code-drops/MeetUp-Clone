@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 // import BasicModal from './LoginModal'
 import styles from './navbar.module.css'
@@ -9,6 +9,8 @@ import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { AppContext } from '../../context/AppContextProvider';
 
 
 const Nav = styled.nav`
@@ -29,15 +31,36 @@ const IconImage = styled.img`
 
 
 export default function Navbar2() {
+    const [location,setLocation]=React.useState("")
+    const [keyword, setKeyword] = React.useState("")
+    const history = useHistory()
+    const{data,setData}=React.useContext(AppContext)
+    const handleSearch = () => {
+        if (keyword === "" || location === "") {
+            alert("Either location or text missing")
+        }
+        else {
+
+            const eveList = data.filter((item) => item.event_place == location).filter(
+                (item) => item.workshop_details.includes(keyword))
+        
+
+            setData(eveList)
+            history.push('./events')
+        }
+    }
     return (
         <Nav className={styled.navComp}>
            
             <logoCont>
-                <img  src="./logo.svg" alt="logo-img" style={{marginRight:"30px"}} />
+                <Link to="/home">
+                <img  src="./logo.svg" alt="logo-img" style={{marginRight:"30px"}}  />
+
+                </Link>
                 
-            <TextField id="outlined-basic" label="Search for keywords" variant="outlined" />
-            <TextField id="outlined-basic" label="City or zip code" variant="outlined" />
-          <button style={{backgroundColor:"tomato",border:"none",borderTopRightRadius:"5px",borderBottomRightRadius:"5px"}}>  <IconImage
+            <TextField id="outlined-basic" value={keyword} onChange={(e)=>setKeyword(e.target.value)} label="Search for keywords" variant="outlined" />
+            <TextField value={location} onChange={(e)=>setLocation(e.target.value)} id="outlined-basic" label="City or zip code" variant="outlined" />
+          <button onClick={handleSearch} style={{backgroundColor:"tomato",border:"none",borderTopRightRadius:"5px",borderBottomRightRadius:"5px"}}>  <IconImage
           src="https://cdn-icons-png.flaticon.com/512/6583/6583229.png"
           alt="icon"
           ByteLengthQueuingStrategy

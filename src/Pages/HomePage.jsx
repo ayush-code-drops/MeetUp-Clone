@@ -9,34 +9,75 @@ import TealButton from '../Components/Main Page/TealButton'
 import { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
 import NextEvent from './HomePageComps/NextEvent';
+import { useSelector,useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom';
+import BookmarkCard from '../Components/BookmarkCard/BookmarkCard';
+import { removeFromBookmark } from "../redux/bookmark/action";
 
 
 const Home = () => {
     const {location,setLocation} = useContext(AppContext);
     const {name, setName} = useContext(AppContext);
 
-
+    const bookmarks = useSelector((state) => state.bookmarks);
+    const dispatch = useDispatch();
+  
+    const handelClick = (item) => {
+      dispatch(removeFromBookmark(item.id));
+    };
 
     localStorage.setItem("arr",[location,name]);
 
 
     // const [name2,setName2] = useState("");
      console.log("hi",name,location)
-   
+   const history=useHistory()
     const handleclick2 = () => {
         console.log(2);
-        // <Link to="/findgroup"></Link>
+       history.push('/events')
     }
     const handleclick1 = () => {
         console.log(1);
         // <Link to="/findevent"></Link>
     }
 
-
+    const isAuth = useSelector((state) => state.auth.isAuth)
+    
+    // if (!isAuth) {
+    //     return <Redirect to='/'/>
+    // }
 
     return(
         <div>
-            <Navbar2 style={{color:"white"}}/>
+            <Navbar2 style={{ color: "white" }} />
+            
+            {bookmarks.length > 0 && <h1>Saved Events</h1>}
+      {bookmarks.length > 0 &&
+        bookmarks.map(
+          ({
+            id,
+            img_url,
+            event_mode,
+            date,
+            event_name,
+            event_place,
+            attendees
+          }) => (
+            <BookmarkCard
+              key={id}
+              id={id}
+              img_url={img_url}
+              event_mode={event_mode}
+              date={date}
+              event_name={event_name}
+              event_place={event_place}
+              attendees={attendees}
+              handelClick={handelClick}
+            />
+          )
+        )}
+
             {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
              {/* </div> */}
 

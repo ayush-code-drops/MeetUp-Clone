@@ -5,6 +5,7 @@ import Event from '../Components/Event/Event';
 import LayoutPage from '../Components/Main Page/LayoutPage';
 import Home from '../Pages/HomePage';
 import HorizontalLinearStepper from '../CreateYourGroup/HorizontalLinearStepper';
+import Navbar2 from '../Components/Navbar/Navbar2';
 export default function AllRoutes() {
     return (
         <div>
@@ -20,7 +21,11 @@ export default function AllRoutes() {
         <HorizontalLinearStepper/>   
             </Route>   
         
-                <Route exact path='/events'> 
+            <Route exact path='/events'> 
+                <div>
+                    <Navbar2 />
+                    <Event />
+                </div>
           
             </Route>   
             

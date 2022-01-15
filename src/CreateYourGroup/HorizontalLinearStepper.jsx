@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
+import {Link} from "react-router-dom"
 
 const Nav = styled.nav`
   display: flex;
@@ -131,7 +132,7 @@ const handleChange1 = (e) => {
 
 
 
-
+  // const history = React.useHistory();
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -150,6 +151,7 @@ const handleChange1 = (e) => {
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped(newSkipped);
+// history.push('./home')
   };
 
   const handleBack = () => {
@@ -209,6 +211,7 @@ const handleChange1 = (e) => {
               className={classes.instructions}
             >
               All steps completed - you&apos;re finished. The Group is created.
+              Go back to Home Page <Link to="/home">Back to Home</Link>
             </Typography>
             {/* <Button onClick={handleReset} className={classes.button}>
               Reset
@@ -240,7 +243,8 @@ const handleChange1 = (e) => {
 
               <Button
                 variant="contained"
-                color="primary"
+                  color="primary"
+                  
                 onClick={handleNext}
                 style={{ textAlign: "right" }}
                 className={classes.button}

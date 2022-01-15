@@ -7,6 +7,8 @@ import styles from '../Navbar/navbar.module.css'
 import Component1 from './Component1'
 import TealButton from './TealButton'
 import NextEvent from '../../Pages/HomePageComps/NextEvent'
+import { EventNoteSharp } from '@mui/icons-material'
+import Event from '../Event/Event'
 // import tealButton from './TealButton'
 export default function LayoutPage() {
     const isAuth = useSelector(state => state.auth.isAuth)
@@ -76,7 +78,8 @@ return <Redirect to="/home"/>
 
 </div>
 
-</div>
+            </div>
+          
             <Footer />
             
         </div>

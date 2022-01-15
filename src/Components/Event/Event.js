@@ -5,6 +5,8 @@ import Select from '@mui/material/Select';
 import EventComponent from './EventComponent';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import Navbar2 from '../Navbar/Navbar2';
+import { AppContext } from '../../context/AppContextProvider';
 
 const styleContainer = {
     width: "640px",
@@ -69,22 +71,25 @@ function Event() {
         setCate(event.target.value);
     };
 
-    const [data, setData] = React.useState([]);
+    const { data, setData } = React.useContext(AppContext)
+    
+   console.log("datatata",data);
 
-    const getEvents = async () => {
-        let eventData = await axios.get("https://meetupserverjsonserver.herokuapp.com/posts");
-        eventData = eventData.data;
-        setData(eventData);
-        console.log(eventData);
-    }
+    // const getEvents = async () => {
+    //     let eventData = await axios.get("https://meetupserverjsonserver.herokuapp.com/posts");
+    //     eventData = eventData.data;
+    //     setData(eventData);
+    //     console.log(eventData);
+    // }
 
-    React.useEffect(() => {
-        getEvents();
-    }, [])
+    // React.useEffect(() => {
+    //     getEvents();
+    // }, [])
 
     return (
 
         <div style={styleContainer}>
+           
             <br />
             <div>
                 <Select
@@ -152,7 +157,7 @@ function Event() {
             <div>
                 {
                     type === "" ?
-                        data.map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : type === "Online" ? data.filter(({ event_mode }) => (event_mode === "online")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : data.filter(({ event_mode }) => (event_mode === "In-person")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />)
+                        data?.map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : type === "Online" ? data.filter(({ event_mode }) => (event_mode === "online")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />) : data.filter(({ event_mode }) => (event_mode === "In-person")).map(({ img_url, date, event_mode, event_name, event_place, attendees }) => <EventComponent img_url={img_url} event_mode={event_mode} date={date} event_name={event_name} event_place={event_place} attendees={attendees} />)
                 }
             </div>
             :
