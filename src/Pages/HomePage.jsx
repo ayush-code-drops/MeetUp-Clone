@@ -14,6 +14,7 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom";
 import BookmarkCard from "../Components/BookmarkCard/BookmarkCard";
 import { removeFromBookmark } from "../redux/bookmark/action";
+import Attending from "../Components/Attending/Attending";
 
 const Home = () => {
   const { location, setLocation } = useContext(AppContext);
@@ -49,6 +50,7 @@ const Home = () => {
   return (
     <div>
       <Navbar2 style={{ color: "white" }} />
+      <Attending />
 
       {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
       {/* </div> */}
