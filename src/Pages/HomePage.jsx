@@ -14,9 +14,13 @@ import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import { useHistory } from 'react-router-dom';
 import BookmarkCard from '../Components/BookmarkCard/BookmarkCard';
 import { removeFromBookmark } from "../redux/bookmark/action";
+// import Description from  "../Components/Description/Description"
+
 
 
 const Home = () => {
+    
+
     const {location,setLocation} = useContext(AppContext);
     const {name, setName} = useContext(AppContext);
 
@@ -51,7 +55,8 @@ const Home = () => {
     return(
         <div>
             <Navbar2 style={{ color: "white" }} />
-            
+            {/* <Description/> */}
+
             {bookmarks.length > 0 && <h1>Saved Events</h1>}
       {bookmarks.length > 0 &&
         bookmarks.map(
@@ -77,6 +82,32 @@ const Home = () => {
             />
           )
         )}
+            
+            {/* {bookmarks.length > 0 && <h1>Saved Events</h1>}
+      {bookmarks.length > 0 &&
+        bookmarks.map(
+          ({
+            id,
+            img_url,
+            event_mode,
+            date,
+            event_name,
+            event_place,
+            attendees
+          }) => (
+            <BookmarkCard
+              key={id}
+              id={id}
+              img_url={img_url}
+              event_mode={event_mode}
+              date={date}
+              event_name={event_name}
+              event_place={event_place}
+              attendees={attendees}
+              handelClick={handelClick}
+            />
+          )
+        )} */}
 
             {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
              {/* </div> */}

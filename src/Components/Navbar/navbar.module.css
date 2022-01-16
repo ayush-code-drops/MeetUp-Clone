@@ -1,162 +1,154 @@
-.linkDiv{
-    display: flex;
-    align-items: center;
-
+.linkDiv {
+  display: flex;
+  align-items: center;
 }
-.linkDiv div{
-    padding:0px 4px;
-}
-
-.blueBlob{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+.linkDiv div {
+  padding: 0px 4px;
 }
 
-.yellowBlob{
-    position: absolute;
-    top: 240px;
-    left: 150px;
-    z-index: -1;
-}
-.redBlob{
-    position: absolute;
-    top: 680px;
-    left: 15px;
-    z-index: -1;
+.blueBlob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
-.navComp{
-    display:flex;
-justify-content:space-between;
-padding:14px
+.yellowBlob {
+  position: absolute;
+  top: 240px;
+  left: 150px;
+  z-index: -1;
+}
+.redBlob {
+  position: absolute;
+  top: 680px;
+  left: 15px;
+  z-index: -1;
 }
 
-.sec1{
-    margin-top: 90px;
+.navComp {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
 }
 
-.sec1Grid{
-    display: grid;
-    grid-template-columns: 60% 37%;
-    gap: 10px;
-
-}
-.sec1sec1{
-    margin-left: 50px
-}
-.sec1h1{
-    font-size: 48px;
-    width: 77%;
-    line-height: 1;
-    text-align: left;
+.sec1 {
+  margin-top: 90px;
 }
 
-.sec1p{
-    font-size: 16px;
-    margin-top: -20px;
-    text-align: left;
-    width: 72%;
+.sec1Grid {
+  display: grid;
+  grid-template-columns: 60% 37%;
+  gap: 10px;
+}
+.sec1sec1 {
+  margin-left: 50px;
+}
+.sec1h1 {
+  font-size: 48px;
+  width: 77%;
+  line-height: 1;
+  text-align: left;
 }
 
-.logincont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.loginimgcont{
-    /* margin-bottom: 12px; */
-    margin-top: 20px;
+.sec1p {
+  font-size: 16px;
+  margin-top: -20px;
+  text-align: left;
+  width: 72%;
 }
 
-.loginimgcont img{
-width: 48px;
-height: 48px
+.logincont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginimgcont {
+  /* margin-bottom: 12px; */
+  margin-top: 20px;
 }
 
-.loginh1{
-    margin: 0;
+.loginimgcont img {
+  width: 48px;
+  height: 48px;
 }
 
-.loginhr{
-    display: flex;
-    margin-top: 15px;
+.loginh1 {
+  margin: 0;
 }
 
-.loginhr hr{
-    width: 150px;
-    padding: 0px 10px;
-
+.loginhr {
+  display: flex;
+  margin-top: 15px;
 }
 
-.loginsocial{
-    display: flex;
-    align-items: center;
-    border: 1px solid #e6e6e6;
-    padding: 10px;
-    justify-content: space-evenly;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 7px;
+.loginhr hr {
+  width: 150px;
+  padding: 0px 10px;
 }
 
-.inputlabel{
-    text-align: left;
+.loginsocial {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  justify-content: space-evenly;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 7px;
 }
 
-.sec1img{
-    max-width: 100%;
+.inputlabel {
+  text-align: left;
 }
 
-
-
-@media screen and (max-width:1250px) {
-   .yellowBlob{
-display: none;
-   }
-   .blueBlob{
-       height: 300px;
-   }
-  
+.sec1img {
+  max-width: 100%;
 }
 
-@media screen and (max-width:600px) {
-.sec1Grid{
+@media screen and (max-width: 1250px) {
+  .yellowBlob {
+    display: none;
+  }
+  .blueBlob {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sec1Grid {
     grid-template-columns: 100%;
-}
-}
-
-.comp1 img{
-    width: 380px;
-    height: 200px;
-    padding: 0;
+  }
 }
 
-.comp1link{
-    color: #008294;
-    font-weight: bold;
-    font-size: 18px;
-    
+.comp1 img {
+  width: 380px;
+  height: 200px;
+  padding: 0;
 }
 
-.adiv{
-    margin-left: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+.comp1link {
+  color: #008294;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.tealcont{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
+.adiv {
+  margin-left: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
+.tealcont {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
 
-.emailh2{
-    padding: 10px;
+.emailh2 {
+  padding: 10px;
 }
 
 .signp{
@@ -178,3 +170,4 @@ margin-top: 15px;
     margin: 100px 10px;
     
     }
+

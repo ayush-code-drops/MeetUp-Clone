@@ -10,24 +10,24 @@ export default function AllRoutes() {
     return (
         <div>
             
-                <Route exact path='/home'> 
-               <Home/>  
-        </Route>    
-                <Route exact path='/'> 
-           <LayoutPage/>     
-        </Route>    
+            <Route exact path='/home'>
+                <Home />
+            </Route>
+            <Route exact path='/'>
+                <LayoutPage />
+            </Route>
         
-                <Route exact path='/creategroup'> 
-        <HorizontalLinearStepper/>   
-            </Route>   
+            <Route exact path='/creategroup'>
+                <HorizontalLinearStepper />
+            </Route>
         
-            <Route exact path='/events'> 
+            <Route exact path='/events'>
                 <div>
                     <Navbar2 />
                     <Event />
                 </div>
           
-            </Route>   
+            </Route>
             
                 
            

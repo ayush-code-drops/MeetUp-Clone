@@ -1,0 +1,53 @@
+.container1 {
+  text-align: left;
+  padding: 20px 0px 30px 180px;
+  border-bottom: 1px solid lightgray;
+}
+
+.container2 {
+  text-align: left;
+  margin-left: 180px;
+}
+
+.event {
+  margin-top: -16px;
+  padding-top: 0px;
+}
+
+.host {
+  display: flex;
+  flex-direction: row;
+}
+
+.user {
+  height: 60px;
+  width: 60px;
+}
+
+.p1 {
+  margin: 0px 0px 0px 20px;
+  font-size: 18px;
+}
+
+.p2 {
+  margin: 10px 0px 0px 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.image {
+  height: 320px;
+  width: 590px;
+  margin: 0px;
+}
+
+.imageContainer {
+  display: flex;
+  margin-top: 30px;
+}
+
+.button {
+  height: 50px;
+  width: 100px;
+  flex-grow: 1;
+}

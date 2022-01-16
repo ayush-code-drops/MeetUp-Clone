@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
@@ -9,8 +8,20 @@ import TealButton from './TealButton'
 import NextEvent from '../../Pages/HomePageComps/NextEvent'
 import { EventNoteSharp } from '@mui/icons-material'
 import Event from '../Event/Event'
+import { useSelector, useDispatch } from "react-redux";
+import BookmarkCard from "../BookmarkCard/BookmarkCard";
+import { removeFromBookmark } from "../../redux/bookmark/action";
+import Description from "../Description/Description";
 // import tealButton from './TealButton'
 export default function LayoutPage() {
+  // const bookmarks = useSelector((state) => state.bookmarks);
+  // const dispatch = useDispatch();
+
+  // const handelClick = (item) => {
+  //   dispatch(removeFromBookmark(item.id));
+  // };
+
+  // console.log("Heloow, ", bookmarks);
     const isAuth = useSelector(state => state.auth.isAuth)
     
     if (isAuth) {
@@ -19,7 +30,9 @@ return <Redirect to="/home"/>
     return (
         <div>
 
-            
+{/* <Description /> */}
+   
+     
             <Navbar />
 
              <img className={styles.blueBlob} src="https://secure.meetupstatic.com/next/images/blobs/green-blob.svg" alt="img"/>
@@ -79,9 +92,40 @@ return <Redirect to="/home"/>
 </div>
 
             </div>
-          
+            {/* {bookmarks.length > 0 && <h1>Saved Events</h1>}
+      {bookmarks.length > 0 &&
+        bookmarks.map(
+          ({
+            id,
+            img_url,
+            event_mode,
+            date,
+            event_name,
+            event_place,
+            attendees
+          }) => (
+            <BookmarkCard
+              key={id}
+              id={id}
+              img_url={img_url}
+              event_mode={event_mode}
+              date={date}
+              event_name={event_name}
+              event_place={event_place}
+              attendees={attendees}
+              handelClick={handelClick}
+            />
+          )
+        )} */}
             <Footer />
             
-        </div>
-    )
+ </div>
+
+
+
+     
+
+   
+   
+  );
 }
