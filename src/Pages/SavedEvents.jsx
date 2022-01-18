@@ -2,6 +2,7 @@ import React from 'react'
 import BookmarkCard from "../Components/BookmarkCard/BookmarkCard";
 import { removeFromBookmark } from "../redux/bookmark/action";
 import { useSelector, useDispatch } from "react-redux";
+import Navbar2 from "../Components/Navbar/Navbar2"
 export default function SavedEvents() {
   
   const bookmarks = useSelector((state) => state.bookmarks);
@@ -11,8 +12,10 @@ export default function SavedEvents() {
     dispatch(removeFromBookmark(item.id));
   };
     return (
-        <div>
-            {bookmarks.length > 0 && <h1>Saved Events</h1>}
+      <>
+      <Navbar2/>
+      <div>
+        {bookmarks.length > 0 && <h1>Saved Events</h1>}
       {bookmarks.length > 0 &&
         bookmarks.map(
           ({
@@ -38,5 +41,6 @@ export default function SavedEvents() {
           )
         )}
         </div>
+        </>
     )
 }

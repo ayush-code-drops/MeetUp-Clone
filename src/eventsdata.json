@@ -10,8 +10,9 @@
     "category": "Art & Culture",
     "public_details": "Let us meet online and get to know each other a bit and share some music choicws, favourite songs, artists and maybe sing with each other.Event link will be added later.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop code.",
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+   "event_type":"free"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "public_details": "Warm welcome from Nepal Cloud Professional's community! We invite you to join us at Azure Saturday- 2021. Due to covid situation, we are limiting this meetup event to digital only.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Azure Saturday is a free community-focused Azure event dedicated to educating and engaging members of the local technical community. Azure Saturday draws upon the expertise of Azure IT professionals, developers and solutions architects who come together to share their real-world experiences, lessons learned, best practices, and general knowledge with other like-minded individuals.      ",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "What determines a good fate of happiness, or a bad fate of misfortune? We will have a Skype session to learn how Buddhism answers to these questions.Learn the wisdom of Buddha and lead a life of everlasting peace and joy",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "public_details": "Run code without provisioning or managing infrastructure. Simply write and upload code as a .zip file or container image.",
     "presentation_details": "Automatically respond to code execution requests at any scale, from a dozen events per day to hundreds of thousands per second.",
     "workshop_details": "Save costs by paying only for the compute time you use—by per-millisecond—instead of provisioning infrastructure upfront for peak capacity.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 5,
@@ -66,8 +70,9 @@
     "category": "Movements & Politics",
     "public_details": "lets you run code for virtually any type of application or backend service without provisioning or managing servers. You can trigger Lambda from over 200 AWS services and software as a service (SaaS) applications, and only pay for what you use.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "Optimize code execution time and performance with the right function memory size. Respond to high demand in double-digit milliseconds with Provisioned Concurrency.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "workshop_details": "Optimize code execution time and performance with the right function memory size. Respond to high demand in double-digit milliseconds with Provisioned Concurrency code.",
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
     "public_details": "Process data at scale Execute code at the capacity you need, as you need it. Scale to match your data volume automatically and enable custom event triggers.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Use Amazon Simple Storage Service (Amazon S3) to trigger AWS Lambda data processing in real time after an upload, or connect to an existing Amazon EFS file system to enable massively parallel shared access for large-scale file processing.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
     "public_details": "Run interactive web and mobile backends Combine AWS Lambda with other AWS services to create secure, stable, and scalable online experiences.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Whatever the confusion may be, the root cause is that you most likely don't have a clear grasp of the customer’s journey to purchasing your product or service.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
     "public_details": "Learn how to communicate to resolve or diffuse group conflicts Make better decisions about using technology for group work based on key practical and conceptual considerations",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Recently revised and updated!  Effective teamwork and group communication are essential for your professional and personal success.  In this course you will learn to: make better decisions, be more creative and innovative, manage conflict and work with difficult group members, negotiate for preferred outcomes, improve group communication in virtual environments, develop a better overall ",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 9,
@@ -122,8 +130,9 @@
     "category": "Writing",
     "public_details": "AXIND is focused on providing domain-specific solutions to the Fashion and Lifestyle industries. We are committed to delivering to our customers and partners solutions that strategically integrate technology with their businesses to give them a competitive advantage in terms of operational excellence, customer intimacy, and product leadership. While we are focused on internet technologies, our breadth and depth of knowledge of client/server and legacy systems enable us to help clients leverage existing mission-critical systems, saving both cost and time.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "We pride ourselves on being domain specialists and count hundreds of man-years experience in our team. Our people have managed businesses, designed and implemented systems in Europe, the Indian subcontinent and the Far East.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "workshop_details": "We pride ourselves on being domain specialists and count hundreds of man-years experience in our team. Our people have managed businesses, designed and implemented systems in Europe, the Indian subcontinent and the Far East code.",
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 10,
@@ -137,7 +146,8 @@
     "public_details": "Building the modern cloud data stack on the data lakehouse",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "The world’s largest data and AI conference returns live, June 27-30 in San Francisco and virtually in our new hybrid format. Four days packed with keynotes by industry visionaries, technical sessions, hands-on training and networking opportunities.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 11,
@@ -150,8 +160,9 @@
     "category": "Social Activities",
     "public_details": "A design degree is not a requirement to enter the field of UX design.",
     "presentation_details": "Being one of the most active people in the community she has mentored 1000+ people. She has helped many young designers in learning UX skills and building design portfolios.",
-    "workshop_details": "While working with multiple product companies, we have come across many amazing designers who used to be engineers, architects, content writers… but had transitioned in UX design",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "workshop_details": "code While working with multiple product companies, we have come across many amazing designers who used to be engineers, architects, content writers… but had transitioned in UX design",
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 12,
@@ -165,7 +176,8 @@
     "public_details": "When you step into the fold at 91Springboard, you’ve come home. Because we’re not just like family. We are family. We want to high-five your wins. We want to watch you grow. We want to see you turn your walk into a sprint. We want to ensure that if you ever stumble, we have your back. Because that’s what family does. They look out for each other. And at 91Springboard, we’ll look out for you.",
     "presentation_details": "The 91S experience, Call for Presentation: Coming soon",
     "workshop_details": "India’s capital and a major gateway to the country, Delhi is a bustling metropolis which successfully combines the ancient with the modern, all within its folds. The city can be divided into two parts – New Delhi and Old Delhi. While Old Delhi is known for its ancient culture and monuments along with its gastronomical lanes, New Delhi is home to wide avenues lined with lush trees and backed by imposing government buildings.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 13,
@@ -179,7 +191,8 @@
     "public_details": "Meet new friends! We will have smaller group breakout sessions. You guys have chance to connect each other. We changed to saturday night about online meetup during in mco period. Everyone is welcomed. Zoom link or ID will be provided on the day itself by me.",
     "presentation_details": "-can talk with people who stay in singapore,malaysia, and hong kong by zoom online meet up during in the covid pandemic period",
     "workshop_details": "-Come meet new friends - Build up new friendships - Chat and talk about a lot of topics! - Talk about yourself freely ! - Remove weekly stress away! - We make a small group to talk. - It is free of charge. - can do language exchange small group(korean,Japanese,chinese,spanish,and french etc) - having general several topics such as (hobby,love relationship,music,movies, and sining karaoke etc)",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 14,
@@ -193,7 +206,8 @@
     "public_details": "Learn skills, theory, and mindsets for one-on-one professional coaching.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Whether you attend standalone courses or complete an organizational leadership certificate, ELOC prepares you for the future by learning essential strategies for coaching, design thinking principles, and the latest frameworks. We are recognized by SHRM to offer Professional Developement Credits for the SHRM-CP or SHRM-SCP, as well as being an accredited IACET Continuting Education Unit (CEU) provider.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 15,
@@ -207,7 +221,8 @@
     "public_details": "Diploma and certificate programs to enable you to create positive change. Study counselling and learn how to support and benefit individuals, couples & families. PACFA Accredited. 30+ years' experience. Enrolment Now Open. APAC Accredited. Fee-Help Available. Flexible study options. Highlights: Course Information Pack Available, Course Adviser Available, Online Enquiry Option Available.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Apply 100% online today for a Bible, Ministry, or Theology course at Morling College. Morling College has over 100 year's experience in equipping people for Ministry. Flexible Learning. Online Courses. 100+ Years of Experience. Enquire now. Christian Perspective.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 16,
@@ -221,7 +236,8 @@
     "public_details": "which teaches Zen meditation in English and became intrigued by the monk behind it all. Takafumi Kawakami turns out to be an extremely modern Buddhist monk. He comes from a long line of Buddhist priests but studied in the US before returning to Japan. He embraces Buddhism as ritual, as his heritage and as an intellectual practice, but without any slant of dogma. His traditional robes belie his modern approach; he travels to the US frequently, has taught at IDEO and works with several startups. He is the Buddhist monk with the singing bowl and the shiny iPhone.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "And just like that, Taka Kawakami wiped the slate. I stalled at this point. How do you even follow that? Purpose had just become a non-question. But his response was also liberating: the purpose in our lives is what we create for ourselves. There is no right answer, or potentially, lots of right answers:",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 17,
@@ -235,7 +251,8 @@
     "public_details": "A Power Platform Festival. This is a free, event driven by user groups and communities around the world, for anyone who wants to learn more about Microsoft’s Power Platform. In this boot camp we will deep-dive into Microsoft’s Power Platform stack with hands-on sessions and labs, delivered to you by the experts and community leaders.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Sat, Feb 19, 11:00 AM NPT: Warm welcome from Nepal Cloud Professional's and Power Community Nepal! ... Power Platform Bootcamp 2022- Kathmandu, Nepal.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 18,
@@ -249,7 +266,8 @@
     "public_details": "Over the last few years, the growth of digital currencies has increased rapidly resulting in a fast-growing list of used cases for digital tokens. Many Blockchain-based initiatives are coming up all over the world, each claiming to be the next innovation tool by issuing digital tokens with the purpose of increasing user adoption and usage of the tokens, as well as promoting the use of certain blockchain platforms.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "This Meetup will focus on projects being carried out to create the micro-economics, principles, and the models that drive tokens, currencies, and the initiatives that support them are still in their early stages of figuring out what really works.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 19,
@@ -263,7 +281,8 @@
     "public_details": "A special session by a medical doctor and a Yoga trainer to learn lifestyle tricks to keep the body healthy",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "What to eat? When to eat? Lets look at simple diet tricks to have tasty yet nutritious food and boost our immunity.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 20,
@@ -277,7 +296,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 21,
@@ -291,7 +311,8 @@
     "public_details": "Through the current trends of digital disruption and increasingly unpredictable political and economical landscape, strong leadership is more important than ever to successfully overcome the challenges faced by all sectors day in day out. We can support your event with a huge range of speakers, with a range of topics and styles, whether you’re looking to be informed, inspired or entertained.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": " Running any organisation or team, at any scale, is about more than sheer passion and determination. Through the topics our speakers can cover, any audience will walk away with a new perspective on what it means to lead.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 22,
@@ -305,7 +326,8 @@
     "public_details": "Keynote speakers who deliver a powerful message in a way that captivates an audience can ensure an event is memorable for many years.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "London Speaker Bureau represents some of the world’s most prominent people including politicians, economists, business leaders, entrepreneurs and influential thinkers. Our keynote speakers are able to talk on a range of subjects from management, innovation and finance to technology, education and the environment.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 23,
@@ -319,7 +341,8 @@
     "public_details": "So if someone ask you 'What book are you reading?' it asking about what genre, either it is romance or scientific. Or it's a novel or just a short story. You may say ' I'm reading Harry Potter novel written by: JK Rowling'.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 24,
@@ -333,7 +356,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 25,
@@ -347,7 +371,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "And then, if we say 'Which book are you reading?' it shows options or choices of what book you would like to read. For example: there are five books on your table so you have to pick then which of those books you like to read. Or which book that catch your interest. You may choose one or two books among the choices, it depends on you.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 26,
@@ -361,7 +386,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 27,
@@ -375,7 +401,8 @@
     "public_details": "Hey everyone, we are glad to announce our monthly meetup for January. I hope you are all excited as we are.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 28,
@@ -389,7 +416,8 @@
     "public_details": "Minute 1: Make sure you have sufficient time to see the conversation through to the end. It is unfair to the other person to drop horrible news or difficult feedback on them and then have to speed off to another conversation. If you don’t have at least 30 minutes to have the conversation, it may be better to postpone it.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Nothing is worse than tossing out old grudges or highly subjective opinions, even if you have all the time in the world to prepare. Write down the actual behavior or event that happened, the consequence of that behavior or event, and why you feel it is important. This brief preparation will help focus the conversation. For example: Fact: a colleague refused to share important information during a meeting; Consequence: you need the information before the end of the day to give to the customer; Feelings: you feel you can’t do the best job possible for the organization without this information.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   },
   {
     "id": 29,
@@ -403,7 +431,8 @@
     "public_details": "Digital disrupters have reset the bar and fundamentally changed how companies engage their customers. Earning and keeping customer loyalty is a growing challenge; one that requires customer journey orchestration. CSG helps companies strategize and build connected, intuitive, customer experiences by integrating individual touchpoints into a seamless, omnichannel journey.",
     "presentation_details": "Call for Presentation: Coming soon",
     "workshop_details": "Consumers expect seamless interactions across all touchpoints with brands they do business with. Aligning your systems and processes to orchestrate conversations that are consistent and relevant to the customer’s journey—across channels—can ensure your business achieves measurable value. But to do this, you must first overcome your organizational silos. ",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"free"
   },
   {
     "id": 30,
@@ -416,7 +445,8 @@
     "category": "Art & Culture",
     "public_details": "Amazon Polly is a service that turns text into lifelike speech, allowing you to create applications that talk, and build entirely new categories of speech-enabled products.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "Amazon Transcribe uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately.",
-    "hosted_by": "Damodar Lohani and Ambika Dulal"
+    "workshop_details": "code Amazon Transcribe uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately.",
+    "hosted_by": "Damodar Lohani and Ambika Dulal",
+    "event_type":"paid"
   }
 ]

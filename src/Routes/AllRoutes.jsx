@@ -9,6 +9,7 @@ import Navbar2 from "../Components/Navbar/Navbar2";
 import Description from "../Components/Description/Description";
 import Group from "../Pages/Group";
 import SavedEvents from "../Pages/SavedEvents";
+import Attending from "../Components/Attending/Attending";
 export default function AllRoutes() {
   return (
     <div>
@@ -40,6 +41,9 @@ export default function AllRoutes() {
       </Route>
       <Route exact path="/yourevents">
 <SavedEvents/>
+      </Route>
+      <Route exact path="/upcomingEvents">
+<Attending/>
       </Route>
     </div>
   );
