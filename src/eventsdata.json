@@ -10,7 +10,7 @@
     "category": "Art & Culture",
     "public_details": "Let us meet online and get to know each other a bit and share some music choicws, favourite songs, artists and maybe sing with each other.Event link will be added later.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop.",
+    "workshop_details": "We are looking for Intermediate level Flutter content it can be a 20 minutes presentation or a 45 minutes hands on workshop code.",
     "hosted_by": "Damodar Lohani and Ambika Dulal"
   },
   {
@@ -66,7 +66,7 @@
     "category": "Movements & Politics",
     "public_details": "lets you run code for virtually any type of application or backend service without provisioning or managing servers. You can trigger Lambda from over 200 AWS services and software as a service (SaaS) applications, and only pay for what you use.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "Optimize code execution time and performance with the right function memory size. Respond to high demand in double-digit milliseconds with Provisioned Concurrency.",
+    "workshop_details": "Optimize code execution time and performance with the right function memory size. Respond to high demand in double-digit milliseconds with Provisioned Concurrency code.",
     "hosted_by": "Damodar Lohani and Ambika Dulal"
   },
   {
@@ -122,7 +122,7 @@
     "category": "Writing",
     "public_details": "AXIND is focused on providing domain-specific solutions to the Fashion and Lifestyle industries. We are committed to delivering to our customers and partners solutions that strategically integrate technology with their businesses to give them a competitive advantage in terms of operational excellence, customer intimacy, and product leadership. While we are focused on internet technologies, our breadth and depth of knowledge of client/server and legacy systems enable us to help clients leverage existing mission-critical systems, saving both cost and time.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "We pride ourselves on being domain specialists and count hundreds of man-years experience in our team. Our people have managed businesses, designed and implemented systems in Europe, the Indian subcontinent and the Far East.",
+    "workshop_details": "We pride ourselves on being domain specialists and count hundreds of man-years experience in our team. Our people have managed businesses, designed and implemented systems in Europe, the Indian subcontinent and the Far East code.",
     "hosted_by": "Damodar Lohani and Ambika Dulal"
   },
   {
@@ -150,7 +150,7 @@
     "category": "Social Activities",
     "public_details": "A design degree is not a requirement to enter the field of UX design.",
     "presentation_details": "Being one of the most active people in the community she has mentored 1000+ people. She has helped many young designers in learning UX skills and building design portfolios.",
-    "workshop_details": "While working with multiple product companies, we have come across many amazing designers who used to be engineers, architects, content writers… but had transitioned in UX design",
+    "workshop_details": "code While working with multiple product companies, we have come across many amazing designers who used to be engineers, architects, content writers… but had transitioned in UX design",
     "hosted_by": "Damodar Lohani and Ambika Dulal"
   },
   {
@@ -416,7 +416,7 @@
     "category": "Art & Culture",
     "public_details": "Amazon Polly is a service that turns text into lifelike speech, allowing you to create applications that talk, and build entirely new categories of speech-enabled products.",
     "presentation_details": "Call for Presentation: Coming soon",
-    "workshop_details": "Amazon Transcribe uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately.",
+    "workshop_details": "code Amazon Transcribe uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately.",
     "hosted_by": "Damodar Lohani and Ambika Dulal"
   }
 ]

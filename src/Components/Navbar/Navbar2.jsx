@@ -50,14 +50,34 @@ export default function Navbar2() {
     const [location,setLocation]=React.useState("")
     const [keyword, setKeyword] = React.useState("")
     const history = useHistory()
-    const{data,setData}=React.useContext(AppContext)
+    var {data,setData}=React.useContext(AppContext)
   const handleSearch = () => {
-    setData(eventlog)
+    console.log("eve",eventlog)
+    data=eventlog
+    
     
     console.log('searchdata',data)
-        if (keyword === "" || location === "") {
-            alert("Either location or text missing")
+        if (keyword === "" && location === "") {
+            alert("Search with either location or keyword")
         }
+    
+    else if (location === "") {
+      const eveList = data.filter(
+        (item) => item.workshop_details.includes(keyword))
+
+
+    setData(eveList)
+    history.push('./events')
+        }
+          
+        else if (keyword === "") { 
+          const eveList = data.filter((item) => item.event_place == location)
+    
+
+        setData(eveList)
+        history.push('./events')
+        }
+          
         else {
 
             const eveList = data.filter((item) => item.event_place == location).filter(
