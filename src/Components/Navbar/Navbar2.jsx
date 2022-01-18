@@ -17,6 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import eventlog from "../../eventsdata.json"
 // import Dropdown from 'react-bootstrap/Dropdown'
 
 const Nav = styled.nav`
@@ -43,6 +44,7 @@ export default function Navbar2() {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
+    console.log('e',eventlog)
     setAnchorEl(null);
   };
     const [location,setLocation]=React.useState("")
@@ -50,7 +52,9 @@ export default function Navbar2() {
     const history = useHistory()
     const{data,setData}=React.useContext(AppContext)
   const handleSearch = () => {
-   
+    setData(eventlog)
+    
+    console.log('searchdata',data)
         if (keyword === "" || location === "") {
             alert("Either location or text missing")
         }
@@ -114,8 +118,9 @@ export default function Navbar2() {
           'aria-labelledby': 'basic-button',
         }}
       >
-                        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourevents'>Saved Events</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourevents'>SavedEvents</Link></MenuItem>
         <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourgroups'>Your Groups</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/upcomingEvents'>Upcoming Events</Link></MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>

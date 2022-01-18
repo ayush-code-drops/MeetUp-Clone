@@ -53,7 +53,7 @@ const Home = () => {
   return (
     <div>
       <Navbar2 style={{ color: "white" }} />
-      <Attending />
+      {/* <Attending /> */}
 
       {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
       {/* </div> */}
