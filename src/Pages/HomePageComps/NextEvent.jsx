@@ -72,6 +72,27 @@ const costType = [
     },
   ];
 
+  
+const location = [
+    {
+      value: "Kanpur",
+  
+      label: "Knapur",
+    },
+  
+    {
+      value: "Noida",
+  
+      label: "Noida",
+    },
+  
+    {
+      value: "Kanpur+Noida",
+  
+      label: "Kanpur+Noida",
+    },
+  ];
+
 export default function NextEvent() {
   const { data, setData } = React.useContext(AppContext);
 
@@ -79,6 +100,7 @@ export default function NextEvent() {
 
   const [currency, setCurrency] = React.useState("In Person");
   const [cost, setCost] = React.useState("free");
+  const [locationType, setLocationType] = React.useState("Noida");
 
   const [value, setValue] = React.useState(new Date("2022-01-15"));
   const [location, setLocation] = React.useState("");
@@ -92,6 +114,9 @@ export default function NextEvent() {
     setCurrency(event.target.value);
   };
   const handleCost = (event) => {
+    setCost(event.target.value);
+  };
+  const handleLocation = (event) => {
     setCost(event.target.value);
   };
 
@@ -164,6 +189,23 @@ export default function NextEvent() {
         onChange={handleCost}
       >
         {costType.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+
+
+      </TextField>
+
+
+      <TextField
+        sx={{ marginRight: "15px", width: "39%" }}
+        id="outlined-select-costType"
+        select
+        value={locationType}
+        onChange={handleLocation}
+      >
+        {location.map((option) => (
           <MenuItem key={option.value} value={option.value}>
             {option.label}
           </MenuItem>

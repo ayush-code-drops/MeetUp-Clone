@@ -46,7 +46,7 @@ function Event() {
 
   const [dayType, setDayType] = React.useState("");
   const [type, setType] = React.useState("");
-  const [dist, setDist] = React.useState(Infinity);
+  const [dist, setDist] = React.useState("");
   const [cate, setCate] = React.useState("");
 
   const handleDayType = (event) => {
@@ -136,7 +136,7 @@ function Event() {
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
         >
-          <MenuItem value={Infinity}>
+          <MenuItem value="">
             <em>Locations</em>
           </MenuItem>
           {distance.map((d) => (
@@ -162,7 +162,7 @@ function Event() {
 
       {data.length !== 0 ? (
         <div>
-          {type === "" && dayType ===""
+          {type === "" && dayType ==="" && dist === ""
             ? data.map(
                 ({
                   id,
@@ -188,9 +188,9 @@ function Event() {
                   />
                 )
               )
-            : type === "Online" && dayType === "free"
+            : type === "Online" && dayType === "free" && dist==="Kanpur"
             ? data
-                .filter(({ event_mode,event_type }) => event_mode === "online" && event_type === "free")
+                .filter(({ event_mode,event_type,event_place }) => event_mode === "online" && event_type === "free" && event_place === "Kanpur")
                 .map(
                   ({
                     id,
@@ -217,7 +217,7 @@ function Event() {
                   )
                 )
             : data
-                .filter(({ event_mode,event_type }) => event_mode === "In-person" && event_type==="paid")
+                .filter(({ event_mode,event_type,event_place }) => event_mode === "In-person" && event_type==="paid" && event_place==="Noida")
                 .map(
                   ({
                     id,
