@@ -114,7 +114,7 @@ export default function Navbar2() {
           'aria-labelledby': 'basic-button',
         }}
       >
-                        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourevents'>Your Events</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourevents'>Saved Events</Link></MenuItem>
         <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourgroups'>Your Groups</Link></MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>

@@ -7,6 +7,8 @@ import Home from "../Pages/HomePage";
 import HorizontalLinearStepper from "../CreateYourGroup/HorizontalLinearStepper";
 import Navbar2 from "../Components/Navbar/Navbar2";
 import Description from "../Components/Description/Description";
+import Group from "../Pages/Group";
+import SavedEvents from "../Pages/SavedEvents";
 export default function AllRoutes() {
   return (
     <div>
@@ -32,6 +34,12 @@ export default function AllRoutes() {
 
       <Route exact path="/events/:id">
        <Description/>
+      </Route>
+      <Route exact path="/yourgroups">
+<Group/>
+      </Route>
+      <Route exact path="/yourevents">
+<SavedEvents/>
       </Route>
     </div>
   );

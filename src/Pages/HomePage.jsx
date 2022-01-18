@@ -163,7 +163,7 @@ const Home = () => {
 
       {/* if (name)  ( */}
       {/* { count && <h1>Messages: {count}</h1>} */}
-      {name && (
+      {/* {name && (
         <div>
           <h3>Your Created Groups will show here.</h3>
 
@@ -215,7 +215,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* ) */}
 
