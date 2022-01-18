@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { useContext } from "react";
+import Navbar2 from "../Components/Navbar/Navbar2"
 
 import { AppContext } from "../context/AppContextProvider";
 export default function Group() {
@@ -8,6 +9,7 @@ export default function Group() {
     const { name, setName } = useContext(AppContext);
         return (
         <div>
+            <Navbar2/>
            {
                     name && <div style={{marginBottom : "60px"}}>
                     <h3>Your Created Groups will show here.</h3>
