@@ -11,7 +11,13 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../context/AppContextProvider';
-
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+// import Dropdown from 'react-bootstrap/Dropdown'
 
 const Nav = styled.nav`
 display:flex;
@@ -31,11 +37,20 @@ const IconImage = styled.img`
 
 
 export default function Navbar2() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
     const [location,setLocation]=React.useState("")
     const [keyword, setKeyword] = React.useState("")
     const history = useHistory()
     const{data,setData}=React.useContext(AppContext)
-    const handleSearch = () => {
+  const handleSearch = () => {
+   
         if (keyword === "" || location === "") {
             alert("Either location or text missing")
         }
@@ -69,18 +84,42 @@ export default function Navbar2() {
             <div className="startGroup">
                 <Link className={styles.grouplink} to="/createGroup">Start a new group - 30% off!</Link>
            </div>
-            <div className={styles.linkDiv}>
+            <div className={styles.linkDiv2}>
                 <div style={{marginleft: 10,fontSize:"20px"}}>
-                    <MessageIcon/>
+                    <ChatBubbleOutlineIcon/>
                 </div>
             
                 <div style={{marginleft: 10,fontSize:"20px"}}>
-                     <NotificationsIcon/>
+                    <NotificationsNoneIcon sx={{fontSize:'28px'}}/>
                </div>
                    
-                <div style={{marginleft: 10,fontSize:"20px"}}>
-                    <AssignmentIndIcon/>
-                </div>
+               
+
+                <div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+                        <AccountCircleIcon sx={{fontSize:'40px',color:'#F64060',m:1,marginLeft:'-10px',marginBottom:'10px'}}/>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+                        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourevents'>Your Events</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link className={styles.menulink} to='/yourgroups'>Your Groups</Link></MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+    </div>
+
                     
               
             </div>

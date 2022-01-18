@@ -24,6 +24,7 @@ import {
   loginFailure,
   loginRequest,
   loginSuccess,
+  verifyLogin,
   wrongCredentials
 } from "../../redux/auth/action";
 
@@ -61,28 +62,10 @@ export default function BasicModal() {
   const { isAuth, isLoading, isError } = useSelector((state) => state.auth);
   console.log("auth", isAuth, isLoading, isError);
   const dispatch = useDispatch();
+  let pass=values.password
   const handleLogin = () => {
-    dispatch(loginRequest());
-    fetchUserData()
-      .then((res) => {
-        console.log(res.data);
-        const userExist = res.data.filter((item) => {
-          if (item.email === email && item.password === values.password) {
-            return item;
-          }
-        });
-
-        if (userExist.length === 0) {
-          dispatch(wrongCredentials());
-          alert("Wrong Credentials");
-        } else {
-          dispatch(loginSuccess());
-          alert("Login Successful");
-        }
-      })
-      .catch((err) => {
-        dispatch(loginFailure());
-      });
+   dispatch(verifyLogin({email,pass}))
+   
   };
 
   const handleChange = (prop) => (event) => {

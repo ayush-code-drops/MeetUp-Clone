@@ -51,3 +51,8 @@
   width: 100px;
   flex-grow: 1;
 }
+
+
+.data {
+  font-size: 18px;
+}

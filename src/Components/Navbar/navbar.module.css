@@ -1,9 +1,12 @@
-.linkDiv {
+.linkDiv,.linkDiv2 {
   display: flex;
   align-items: center;
 }
 .linkDiv div {
-  padding: 0px 4px;
+  padding: 0px 6px;
+}
+.linkDiv2 div {
+  padding: 0px 13px;
 }
 
 .blueBlob {
@@ -161,7 +164,7 @@
     font-weight: 600;
 display: flex;
 align-self: center;
-margin-top: 15px;
+margin-top: 21px;
 }
 .nextSec{
     display: grid;
@@ -169,5 +172,10 @@ margin-top: 15px;
     gap: 5px;
     margin: 100px 10px;
     
+    }
+
+    .menulink{
+      text-decoration: none;
+      color: black;
     }
 

@@ -72,12 +72,17 @@ const handleChange1 = (e) => {
               Meetup groups meet locally, in person and online. We'll connect you
               with people in your area, and more can join you online.
             </p>
+            <p>Getting back out there is exciting, but it’s understandable to feel a bit nervous. Here’s how you can make the transition easier. Three Ways to Make Coworker Friendships While Working From Home
+            Work friendships don’t need to fade just because you’re working remotely. Here are three fun ways you can get to know your colleagues. Reduce stress, improve your mood, and connect with others by pursuing your new artistic hobby through Meetup.</p>
+            <div style={{display: 'flex',gap:"3rem"}}>
+            <p>Choose Your Location : </p>
             <TextField
               id="outlined-basic"
               label="Choose Group location"
               variant="outlined"
               onChange={handleChange}
             />
+          </div>
           </div>
         );
       case 1:
@@ -89,12 +94,19 @@ const handleChange1 = (e) => {
               is about. Feel free to get creative! You can edit this later if you
               change your mind.
             </p>
+            <p>Getting back out there is exciting, but it’s understandable to feel a bit nervous. Here’s how you can make the transition easier. Three Ways to Make Coworker Friendships While Working From Home
+            Work friendships don’t need to fade just because you’re working remotely. Here are three fun ways you can get to know your colleagues. Reduce stress, improve your mood, and connect with others by pursuing your new artistic hobby through Meetup.</p>
+           
+            <div style={{display: 'flex',gap:"3rem"}}>
+            <p>Your Group Name : </p>
             <TextField
               id="outlined-basic"
               label="Your Group name?"
               variant="outlined"
               onChange={handleChange1}
             />
+          </div>
+            
           </div>
         );
       case 2:
@@ -183,6 +195,9 @@ const handleChange1 = (e) => {
         <LogoCont>
           <img src="./logo.svg" alt="logo-img" />
         </LogoCont>
+        <LogoCont style={{marginRight:"30px",backgroundColor:"tomato",borderRadius:"10px",padding:"10px",color:"white"}}>
+          Save and exit
+        </LogoCont>
       </Nav>
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
@@ -222,7 +237,7 @@ const handleChange1 = (e) => {
             <Typography className={classes.instructions}>
               {getStepContent(activeStep)}
             </Typography>
-            <div>
+            <div style={{display:"flex",justifyContent: "right",marginRight:"100px"}}>
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}

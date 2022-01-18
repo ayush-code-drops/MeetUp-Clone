@@ -69,18 +69,18 @@ function Event() {
 
   const [data, setData] = React.useState([]);
 
-  const getEvents = async () => {
-    let eventData = await axios.get(
-      "https://meetupserverjsonserver.herokuapp.com/posts"
-    );
-    eventData = eventData.data;
-    setData(eventData);
-    console.log(eventData);
-  };
+  // const getEvents = async () => {
+  //   let eventData = await axios.get(
+  //     "https://meetupserverjsonserver.herokuapp.com/posts"
+  //   );
+  //   eventData = eventData.data;
+  //   setData(eventData);
+  //   console.log(eventData);
+  // };
 
-  React.useEffect(() => {
-    getEvents();
-  }, []);
+  // React.useEffect(() => {
+  //   getEvents();
+  // }, []);
 
   const dispatch = useDispatch();
   const bookmarks = useSelector((state) => state.bookmarks);
