@@ -15,15 +15,7 @@ const styleContainer = {
 };
 
 function Event() {
-  const days = [
-    "Starting soon",
-    "Today",
-    "Tomorrow",
-    "This week",
-    "This weekend",
-    "Next week",
-    "Custom"
-  ];
+  
 
   const distance = [2, 5, 10, 25, 50, 100];
 
