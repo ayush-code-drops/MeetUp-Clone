@@ -1,0 +1,52 @@
+.container {
+  padding: 20px 40px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin: 20px 80px;
+  display: flex;
+}
+
+.p1,
+.p2,
+.p3 {
+  text-align: left;
+}
+
+.p1 {
+  padding: 6px 0px 0px 0px;
+  margin: 0px;
+  color: #877457;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.p2 {
+  margin: 0px;
+  padding: 6px 0px 0px 0px;
+  color: #212121;
+  font-weight: bold;
+  font-size: 26px;
+  padding-top: 12px;
+  padding-bottom: 22px;
+}
+
+.p3 {
+  margin: 0px;
+  padding: 6px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  color: lightgray;
+}
+
+.line3 {
+  flex-grow: 1;
+}
+
+.line4 {
+  margin: 4px 8px;
+}
+
+.container2 {
+  flex-grow: 1;
+}
