@@ -15,16 +15,11 @@ const styleContainer = {
 
 function Event() {
   const days = [
-    "Starting soon",
-    "Today",
-    "Tomorrow",
-    "This week",
-    "This weekend",
-    "Next week",
-    "Custom"
+    "free",
+    "paid",
   ];
 
-  const distance = [2, 5, 10, 25, 50, 100];
+  const distance = ["Kanpur","Lucknow","Noida","Delhi"];
 
   const category = [
     "Art & Culture",
@@ -114,7 +109,7 @@ function Event() {
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value="">
-            <em>Any Day</em>
+            <em>Cost Type</em>
           </MenuItem>
           {days.map((day) => (
             <MenuItem value={day}>{day}</MenuItem>
@@ -142,10 +137,10 @@ function Event() {
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value={Infinity}>
-            <em>Any Distance</em>
+            <em>Locations</em>
           </MenuItem>
           {distance.map((d) => (
-            <MenuItem value={d}>{d} miles</MenuItem>
+            <MenuItem value={d}>{d}</MenuItem>
           ))}
         </Select>
 
@@ -167,7 +162,7 @@ function Event() {
 
       {data.length !== 0 ? (
         <div>
-          {type === ""
+          {type === "" && dayType ===""
             ? data.map(
                 ({
                   id,
@@ -176,6 +171,7 @@ function Event() {
                   event_mode,
                   event_name,
                   event_place,
+                  event_type,
                   attendees
                 }) => (
                   <EventComponent
@@ -187,13 +183,14 @@ function Event() {
                     event_name={event_name}
                     event_place={event_place}
                     attendees={attendees}
+                    event_type={event_type}
                     handelClick={handelClick}
                   />
                 )
               )
-            : type === "Online"
+            : type === "Online" && dayType === "free"
             ? data
-                .filter(({ event_mode }) => event_mode === "online")
+                .filter(({ event_mode,event_type }) => event_mode === "online" && event_type === "free")
                 .map(
                   ({
                     id,
@@ -202,6 +199,7 @@ function Event() {
                     event_mode,
                     event_name,
                     event_place,
+                    event_type,
                     attendees
                   }) => (
                     <EventComponent
@@ -212,13 +210,14 @@ function Event() {
                       date={date}
                       event_name={event_name}
                       event_place={event_place}
+                      event_type={event_type}
                       attendees={attendees}
                       handelClick={handelClick}
                     />
                   )
                 )
             : data
-                .filter(({ event_mode }) => event_mode === "In-person")
+                .filter(({ event_mode,event_type }) => event_mode === "In-person" && event_type==="paid")
                 .map(
                   ({
                     id,
@@ -227,6 +226,7 @@ function Event() {
                     event_mode,
                     event_name,
                     event_place,
+                    event_type,
                     attendees
                   }) => (
                     <EventComponent
@@ -237,6 +237,7 @@ function Event() {
                       date={date}
                       event_name={event_name}
                       event_place={event_place}
+                      event_type={event_type}
                       attendees={attendees}
                       handelClick={handelClick}
                     />

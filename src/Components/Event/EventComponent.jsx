@@ -13,6 +13,7 @@ function EventComponent({
   event_name,
   event_place,
   attendees,
+  event_type,
   handelClick
 }) {
   const [state, setState] = useState(false);
@@ -36,7 +37,9 @@ function EventComponent({
         <p className={styles.p3}>
           {event_mode} • {event_place}, IN
         </p>
+        <p className={styles.p4}>Event-Type : {event_type}</p>
         <p className={styles.p4}>
+         
           <div>{attendees} attendees</div>
           <KeepMountedModal />
           {state === false ? (

@@ -51,12 +51,34 @@ const currencies = [
   },
 ];
 
+
+const costType = [
+    {
+      value: "free",
+  
+      label: "free",
+    },
+  
+    {
+      value: "paid",
+  
+      label: "paid",
+    },
+  
+    {
+      value: "free+paid",
+  
+      label: "free+paid",
+    },
+  ];
+
 export default function NextEvent() {
   const { data, setData } = React.useContext(AppContext);
 
   // console.log("nwxtdata",data)
 
   const [currency, setCurrency] = React.useState("In Person");
+  const [cost, setCost] = React.useState("free");
 
   const [value, setValue] = React.useState(new Date("2022-01-15"));
   const [location, setLocation] = React.useState("");
@@ -68,6 +90,9 @@ export default function NextEvent() {
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
+  };
+  const handleCost = (event) => {
+    setCost(event.target.value);
   };
 
   const handleEventSearch = () => {
@@ -127,6 +152,24 @@ export default function NextEvent() {
             {option.label}
           </MenuItem>
         ))}
+
+
+      </TextField>
+
+      <TextField
+        sx={{ marginRight: "15px", width: "39%" }}
+        id="outlined-select-costType"
+        select
+        value={cost}
+        onChange={handleCost}
+      >
+        {costType.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+
+
       </TextField>
 
       <LocalizationProvider dateAdapter={AdapterDateFns}>

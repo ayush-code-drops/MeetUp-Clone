@@ -135,7 +135,7 @@ function Event() {
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value={Infinity}>
-            <em>Any Distance</em>
+            <em>Some Location</em>
           </MenuItem>
           {distance.map((d) => (
             <MenuItem value={d}>{d} miles</MenuItem>
@@ -206,6 +206,7 @@ function Event() {
                       event_name={event_name}
                       event_place={event_place}
                       attendees={attendees}
+                      Event-Type = {event_type}
                       handelClick={handelClick}
                     />
                   )
