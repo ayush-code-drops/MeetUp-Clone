@@ -8,6 +8,7 @@ import Stack from "@mui/material/Stack";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBookmark, removeFromBookmark } from "../../redux/bookmark/action";
 import { AppContext } from '../../context/AppContextProvider';
+import eventlog from "../../eventsdata.json"
 const styleContainer = {
   width: "640px",
   marginLeft: "12vw"
@@ -50,13 +51,13 @@ function Event() {
   ];
 
   const [dayType, setDayType] = React.useState("");
+  const [cost, setCost] = React.useState("");
+
   const [type, setType] = React.useState("");
   const [dist, setDist] = React.useState(Infinity);
   const [cate, setCate] = React.useState("");
 
-  const handleDayType = (event) => {
-    setDayType(event.target.value);
-  };
+  
   const handleType = (event) => {
     setType(event.target.value);
   };
@@ -79,11 +80,31 @@ function Event() {
   // React.useEffect(() => {
   //   getEvents();
   // }, []);
+  const handleDayType = (event) => {
+    setCost(event.target.value)
+    console.log("cost",cost)
+    if (cost === "free"||cost==="") { 
+      const costdata = eventlog.filter((item) => item.id%2==0)
+      setData(costdata)
+    }
+    if (cost === "paid") { 
+     const costdata =eventlog.filter((item) => item.id%2!==0)
+      setData(costdata)
+    }
+
+  };
   const handleCategory = (event) => {
     
     setCate(event.target.value);
-    // const catdata = data?.filter((item) => item.category == "Art & Culture")
-    // setData(catdata)
+    console.log("caaat", cate)
+    if (cate === "") {
+      const catdata = eventlog?.filter((item) => item.category == "Art & Culture")
+      setData(catdata)
+    }
+    else {
+      const catdata = eventlog?.filter((item) => item.category == cate)
+      setData(catdata)
+     }
     // console.log("cat",cate,catdata)
   };
   const dispatch = useDispatch();
@@ -106,19 +127,24 @@ function Event() {
     <div style={styleContainer}>
       <br />
       <div>
+
+        Filter Options:
         <Select
           sx={{ maxHeight: 46, m: 1, borderRadius: 10, minWidth: 140 }}
-          value={dayType}
+          value={cost}
           onChange={handleDayType}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value="">
-            <em>Any Day</em>
+            <em>Any Cost</em>
           </MenuItem>
-          {days.map((day) => (
-            <MenuItem value={day}>{day}</MenuItem>
-          ))}
+          <MenuItem value="free">
+            Free
+          </MenuItem>
+        
+            <MenuItem value="paid">Paid</MenuItem>
+         
         </Select>
         <Select
           sx={{ maxHeight: 46, m: 1, borderRadius: 10, minWidth: 140 }}
@@ -134,7 +160,7 @@ function Event() {
           <MenuItem value="InPerson">In Person</MenuItem>)
         </Select>
 
-        <Select
+        {/* <Select
           sx={{ maxHeight: 46, m: 1, borderRadius: 10, minWidth: 140 }}
           value={dist}
           onChange={handleDist}
@@ -147,7 +173,7 @@ function Event() {
           {distance.map((d) => (
             <MenuItem value={d}>{d} miles</MenuItem>
           ))}
-        </Select>
+        </Select> */}
 
         <Select
           sx={{ maxHeight: 46, m: 1, borderRadius: 10, minWidth: 140 }}
