@@ -11,7 +11,7 @@ export default function SavedEvents() {
     dispatch(removeFromBookmark(item.id));
   };
     return (
-        <div>
+      <div>
             {bookmarks.length > 0 && <h1>Saved Events</h1>}
       {bookmarks.length > 0 &&
         bookmarks.map(

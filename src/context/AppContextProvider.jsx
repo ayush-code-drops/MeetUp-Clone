@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
     var [location, setLocation] = useState("");
-    const [data,setData]=useState(eventslog)
+    var [data,setData]=useState(eventslog)
     var [name,setName] = useState("");
 
     return <AppContext.Provider value={{location,setLocation,name,setName,data,setData}}>{children}</AppContext.Provider>

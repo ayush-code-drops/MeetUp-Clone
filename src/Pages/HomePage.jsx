@@ -16,6 +16,7 @@ import BookmarkCard from "../Components/BookmarkCard/BookmarkCard";
 import { removeFromBookmark } from "../redux/bookmark/action";
 // import Description from  "../Components/Description/Description"
 
+import Attending from "../Components/Attending/Attending";
 
 const Home = () => {
 
@@ -52,6 +53,7 @@ const Home = () => {
   return (
     <div>
       <Navbar2 style={{ color: "white" }} />
+      {/* <Attending /> */}
 
       {/* <div style={{height:"60px",backgroundColor:"yellow"}}> */}
       {/* </div> */}
